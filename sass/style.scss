@@ -1,0 +1,360 @@
+@import 'vars';
+@import 'modal';
+
+/*----- GERAL -----*/
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $sec_font_color;
+    margin-bottom: 3rem;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $sec_font_color;
+}
+
+/*----- CABEÇALHO -----*/
+
+header {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
+    color: $main_font_color;
+}
+
+.menu {
+    grid-column: 1 / 6;
+    padding: 2.5rem;
+}
+
+.menu ul, li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $main_font_color;
+    padding: .5rem;
+}
+
+.info-menu li:hover, a:hover {
+  text-decoration: underline;
+  transform: translateY(-10px);
+}
+
+.login::before {
+    content: '';
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin-right: 3px;
+  background: #fff;
+}
+
+.login a:hover {
+    color: $sec_color;
+}
+
+/*----- CORPO -----*/
+
+article {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.intro, .instruct, .faq {
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+
+/*----- INTRODUÇÃO -----*/
+
+.intro h2 {
+    grid-column: 1 / 6;
+}
+
+.intro p {
+    grid-column: 1 / 6;
+    text-align: center;
+}
+
+/*----- INSTRUCT -----*/
+
+.instruct h2 {
+    grid-column: 1 / 6;
+}
+
+.instruct h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.instruct p {
+    text-align: center;
+}
+
+.instruct img {
+    grid-column: 1 / 6;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5)
+}
+
+.p-1 {
+    grid-column: 1 / 2;
+    width: 100%;
+    background: $grad_color;
+    color: $main_font_color;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.p-2 {
+    grid-column: 3 / 4;
+    width: 100%;
+    padding: 1rem;
+    color: $sec_font_color;
+}
+
+.p-3 {
+    grid-column: 5 / 6;
+    width: 100%;
+    background: $grad_color;
+    color: $main_font_color;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/*----- FAQ -----*/
+
+.faq-lista {
+    grid-column: 1 / 6;
+}
+
+.faq h2 {
+    grid-column: 1 / 6;
+}
+
+.faq-lista dt {
+    font-size: 1.5rem;
+    font-weight: bold;  
+    margin-bottom: .5rem;
+    color: $main_color;
+    cursor: pointer;
+}
+  
+.faq-lista dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: $sec_color;
+}
+  
+.faq-lista dd {
+    margin-bottom: .5rem;
+    margin-left: 30px;
+}
+
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: '⬎';
+  margin-left: 10px;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: '⬏';
+}
+
+[data-anime="accordion"] dd.ativo {
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
+/*----- CONTATO -----*/
+
+footer {
+    grid-column: 1 / 6;
+    background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
+    color: $main_font_color;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.rodape{
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 1.2rem;
+}
+
+.rodape h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rodape ul li {
+    display: inline-block;
+    list-style: none;
+    font-weight: bold;
+}
+
+.rodape ul li a{
+    text-decoration: none;
+    color: $sec_color;
+    padding-right: .5rem;
+}
+
+.info-cont {
+    grid-column: 1 / 3;
+}
+
+.redes-sociais {
+    grid-column: 4 / 6;
+    text-align: right;
+}
+
+.rodape img {
+    width: 32px;
+}
+
+/*----- USUÁRIO -----*/
+
+.user {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/*----- TABELA -----*/
+
+.geral-user {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info-user, .financeiro-user, .uso-user {
+    margin: 0 auto;
+}
+
+.financeiro-user li {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.tabela {
+    margin: 8rem;
+}
+
+table {
+    width: 100%;
+}
+
+.tabela th {
+    font-size: 2em;
+    font-weight: bold;
+    color: $main_color;
+    margin: 0px;
+    padding: .5em;
+    border-bottom: 1px solid $sec_font_color;
+}
+
+.tabela td {
+    font-size: 1.5em;
+    margin: 0px;
+    padding: .5em;
+    border-bottom: 1px solid $sec_font_color;
+}
+
+.tabela a {
+    color: $sec_font_color;
+}
+
+.form-pesquisa form {
+    width: max-content;
+    text-align: center;
+    margin:  0 auto;
+    margin-bottom: 5em;
+    border-radius: 20px;
+}
+
+.tabela input {
+    font-weight: bold;
+    font-size: 1.2em;
+    background: #fff;
+    color: $sec_font_color;
+    border: 1px solid $main_color;
+    border-radius: 20px;
+    padding: .5em;
+}
+
+.tabela button {
+    font-family: 'Hubballi', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+    background: $main_color;
+    color: $main_font_color;
+    border: 1px solid $main_color;
+    border-radius: 20px;
+    padding: .5em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabela button:hover {
+    background: #fff;
+    color: $main_color;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+
+
