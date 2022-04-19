@@ -46,8 +46,9 @@
 .p-1 {
     grid-column: 1 / 2;
     width: 100%;
-    background: $grad_color;
+    background: $grad_color_2;
     color: $main_font_color;
+    border: 1px solid $main_color;
     border-radius: 10px;
     padding: 1rem;
 }
@@ -64,10 +65,15 @@
 .p-3 {
     grid-column: 5 / 6;
     width: 100%;
-    background: $grad_color;
+    background: $grad_color_2;
     color: $main_font_color;
+    border: 1px solid $main_color;
     border-radius: 10px;
     padding: 1rem;
+}
+
+.p-2:hover {
+    border: 1px solid $sec_color;
 }
 
 /*----- FAQ -----*/

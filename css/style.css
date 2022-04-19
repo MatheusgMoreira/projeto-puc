@@ -133,6 +133,7 @@
   width: 100%;
   background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
   color: #fff;
+  border: 1px solid #5211A8;
   border-radius: 10px;
   padding: 1rem; }
 
@@ -149,8 +150,12 @@
   width: 100%;
   background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
   color: #fff;
+  border: 1px solid #5211A8;
   border-radius: 10px;
   padding: 1rem; }
+
+.p-2:hover {
+  border: 1px solid #00F58B; }
 
 /*----- FAQ -----*/
 .faq-lista {
@@ -238,6 +243,12 @@
   font-size: 1.5rem;
   padding: 1rem; }
 
+.user-img {
+  width: 30%;
+  border: 1px solid #5211A8;
+  border-radius: 1000px;
+  margin-top: 2rem; }
+
 /*----- CADASTRO -----*/
 .cadastro {
   grid-column: 1 / 6;
@@ -298,7 +309,6 @@
   padding: .7rem 2rem;
   font-size: 1rem;
   color: #fff;
-  font-family: monospace;
   margin-top: 2rem;
   cursor: pointer; }
 
@@ -396,7 +406,6 @@
   padding: .7rem 2rem;
   font-size: 1rem;
   color: #fff;
-  font-family: monospace;
   margin-top: 2rem;
   cursor: pointer; }
 
@@ -484,7 +493,7 @@ article {
 /*----- RODAPÉ -----*/
 footer {
   grid-column: 1 / 6;
-  background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
+  background: linear-gradient(236.85deg, #2a00a9 27.26%, #3c00ff 45.26%, #8b61bd 96.03%);
   color: #fff;
   padding: 1.5rem;
   margin-top: 3rem; }
