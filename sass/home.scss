@@ -1,0 +1,132 @@
+@import 'vars';
+
+.intro, .instruct, .faq {
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+
+/*----- INTRODUÇÃO -----*/
+
+.intro h2 {
+    grid-column: 1 / 6;
+}
+
+.intro p {
+    grid-column: 1 / 6;
+    text-align: center;
+}
+
+/*----- INSTRUCT -----*/
+
+.instruct h2 {
+    grid-column: 1 / 6;
+}
+
+.instruct h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.instruct p {
+    text-align: center;
+}
+
+.instruct img {
+    grid-column: 1 / 6;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.p-1 {
+    grid-column: 1 / 2;
+    width: 100%;
+    background: $grad_color;
+    color: $main_font_color;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.p-2 {
+    grid-column: 3 / 4;
+    width: 100%;
+    padding: 1rem;
+    color: $sec_font_color;
+    border: 1px solid $main_color;
+    border-radius: 10px;
+}
+
+.p-3 {
+    grid-column: 5 / 6;
+    width: 100%;
+    background: $grad_color;
+    color: $main_font_color;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/*----- FAQ -----*/
+
+.faq-lista {
+    grid-column: 1 / 6;
+}
+
+.faq h2 {
+    grid-column: 1 / 6;
+}
+
+.faq-lista dt {
+    font-size: 1.5rem;
+    font-weight: bold;  
+    margin-bottom: .5rem;
+    color: $main_color;
+    cursor: pointer;
+}
+  
+.faq-lista dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: $sec_color;
+}
+  
+.faq-lista dd {
+    margin-bottom: .5rem;
+    margin-left: 30px;
+}
+
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: '⬎';
+  margin-left: 10px;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: '⬏';
+}
+
+[data-anime="accordion"] dd.ativo {
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,85 @@
+@import 'vars';
+
+/*----- CADASTRO DE AGENDAMENTO -----*/
+
+.cad-agd{
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.form-cad-agd {
+    grid-column: 1 / 6;
+    margin: 0 auto;
+    margin: 8rem;
+}
+
+.form-cad-agd h2 {
+    grid-column: 1 / 6;
+}
+
+.form-cad-agd form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: min-content;
+    margin: 0 auto;
+    padding: 4rem;
+    border: 1px solid $main_color;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.form-cad-agd label {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-cad-agd input {
+    width: 300px;
+    height: 1.5rem;
+    padding: .3rem;
+    background: $grad_color;
+    color: $main_font_color;
+    border-radius: 5px;
+    border: none;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        calc(100% - 12px) 100%,
+        0 100%
+    );
+}
+
+.form-cad-agd input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.form-cad-agd button {
+    grid-column: 1 / 6;
+    display: block;
+    margin: 0 auto;
+    background: $main_color;
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: $main_font_color;
+    font-family: monospace;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.form-cad-agd button:hover {
+    background: $sec_color;
+    color: $main_font_color;
+}
+.c-1 {
+    grid-column:  1 / 2;
+}
+
+.c-2 {
+    grid-column:  3 / 4;
+}

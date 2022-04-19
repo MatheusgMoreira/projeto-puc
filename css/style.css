@@ -78,100 +78,20 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.modal button[type="submit"] {
-  display: block;
+.modal a {
+  display: inline-block;
   background: #5211A8;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
   font-size: 1rem;
-  color: white;
-  font-family: monospace;
+  color: #fff;
   margin-top: 1rem;
   cursor: pointer; }
 
-.modal button[type="submit"]:hover {
-  display: block;
+.modal a:hover {
   background: #00F58B;
-  border: none;
-  border-radius: 4px;
-  padding: .7rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  font-family: monospace;
-  margin-top: 1rem;
-  cursor: pointer; }
-
-/*----- GERAL -----*/
-* {
-  font-family: 'Montserrat', sans-serif; }
-
-html, body {
-  margin: 0; }
-
-.main-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 3rem; }
-
-ul, li {
-  margin: 0;
-  padding: 0; }
-
-a {
-  text-decoration: none;
-  color: #333; }
-
-/*----- CABEÇALHO -----*/
-header {
-  grid-column: 1 / 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
   color: #fff; }
-
-.menu {
-  grid-column: 1 / 6;
-  padding: 2.5rem; }
-
-.menu ul, li {
-  display: inline-block;
-  list-style: none; }
-
-.menu ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  padding: .5rem; }
-
-.info-menu li:hover, a:hover {
-  text-decoration: underline;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px); }
-
-.login::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 12px;
-  margin-right: 3px;
-  background: #fff; }
-
-.login a:hover {
-  color: #00F58B; }
-
-/*----- CORPO -----*/
-article {
-  grid-column: 1 / 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 
 .intro, .instruct, .faq {
   grid-column: 2 / 5;
@@ -220,7 +140,9 @@ article {
   grid-column: 3 / 4;
   width: 100%;
   padding: 1rem;
-  color: #333; }
+  color: #333;
+  border: 1px solid #5211A8;
+  border-radius: 10px; }
 
 .p-3 {
   grid-column: 5 / 6;
@@ -286,7 +208,280 @@ article {
   to {
     max-height: 200px;
     opacity: 1; } }
-/*----- CONTATO -----*/
+/*----- ADMINISTRADOR -----*/
+.adm {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.geral-adm {
+  grid-column: 1 / 6;
+  text-align: center;
+  margin: 0 auto; }
+
+.financeiro-adm li {
+  font-size: 1.5rem;
+  padding: 1rem; }
+
+/*----- USUÁRIO -----*/
+.user {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.geral-user {
+  grid-column: 1 / 6;
+  text-align: center;
+  margin: 0 auto; }
+
+.financeiro-user li {
+  font-size: 1.5rem;
+  padding: 1rem; }
+
+/*----- CADASTRO -----*/
+.cadastro {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.form-cadastro {
+  grid-column: 1 / 6;
+  margin: 0 auto;
+  margin: 8rem; }
+
+.form-cadastro h2 {
+  grid-column: 1 / 6; }
+
+.form-cadastro form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  padding: 4rem;
+  border: 1px solid #5211A8;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
+
+.form-cadastro label {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.form-cadastro input {
+  width: 300px;
+  height: 1.5rem;
+  padding: .3rem;
+  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+
+.form-cadastro input:focus {
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  outline: 0; }
+
+.form-cadastro button {
+  grid-column: 1 / 6;
+  display: block;
+  margin: 0 auto;
+  background: #5211A8;
+  border: none;
+  border-radius: 4px;
+  padding: .7rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  font-family: monospace;
+  margin-top: 2rem;
+  cursor: pointer; }
+
+.form-cadastro button:hover {
+  background: #00F58B;
+  color: #fff; }
+
+.c-1 {
+  grid-column: 1 / 2; }
+
+.c-2 {
+  grid-column: 3 / 4; }
+
+/*----- AGENDAMENTO -----*/
+.agendamento {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.agendamento-tabela {
+  grid-column: 1 / 6;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 13rem; }
+
+/*----- FINANCEIRO -----*/
+.financeiro {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.financeiro-tabela {
+  grid-column: 1 / 6;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 13rem; }
+
+/*----- CADASTRO DE AGENDAMENTO -----*/
+.cad-agd {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.form-cad-agd {
+  grid-column: 1 / 6;
+  margin: 0 auto;
+  margin: 8rem; }
+
+.form-cad-agd h2 {
+  grid-column: 1 / 6; }
+
+.form-cad-agd form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  padding: 4rem;
+  border: 1px solid #5211A8;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
+
+.form-cad-agd label {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.form-cad-agd input {
+  width: 300px;
+  height: 1.5rem;
+  padding: .3rem;
+  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+
+.form-cad-agd input:focus {
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  outline: 0; }
+
+.form-cad-agd button {
+  grid-column: 1 / 6;
+  display: block;
+  margin: 0 auto;
+  background: #5211A8;
+  border: none;
+  border-radius: 4px;
+  padding: .7rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  font-family: monospace;
+  margin-top: 2rem;
+  cursor: pointer; }
+
+.form-cad-agd button:hover {
+  background: #00F58B;
+  color: #fff; }
+
+.c-1 {
+  grid-column: 1 / 2; }
+
+.c-2 {
+  grid-column: 3 / 4; }
+
+/*----- GERAL -----*/
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+html, body {
+  margin: 0; }
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3rem; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+/*----- CABEÇALHO -----*/
+header {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background: linear-gradient(236.85deg, #2a00a9 27.26%, #3c00ff 45.26%, #8b61bd 96.03%);
+  color: #fff; }
+
+.menu {
+  grid-column: 1 / 6;
+  padding: 2.5rem; }
+
+.menu ul, li {
+  display: inline-block;
+  list-style: none; }
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: .5rem; }
+
+.info-menu li:hover, .info-menu a:hover {
+  text-decoration: underline;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px); }
+
+.login::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin-right: 3px;
+  background: #fff; }
+
+.login a:hover {
+  color: #00F58B; }
+
+/*----- CORPO -----*/
+article {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+/*----- RODAPÉ -----*/
 footer {
   grid-column: 1 / 6;
   background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
@@ -324,24 +519,9 @@ footer {
 .rodape img {
   width: 32px; }
 
-/*----- USUÁRIO -----*/
-.user {
-  grid-column: 1 / 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-
 /*----- TABELA -----*/
-.geral-user {
-  grid-column: 1 / 6;
-  text-align: center;
-  margin: 0 auto; }
-
 .info-user, .financeiro-user, .uso-user {
   margin: 0 auto; }
-
-.financeiro-user li {
-  font-size: 1.5rem;
-  padding: 1rem; }
 
 .tabela {
   margin: 8rem; }
@@ -385,7 +565,6 @@ table {
   padding: .5em; }
 
 .tabela button {
-  font-family: 'Hubballi', cursive;
   font-weight: bold;
   font-size: 1.2em;
   background: #5211A8;
@@ -403,5 +582,22 @@ table {
   border-radius: 20px;
   -webkit-transition: .3s;
   transition: .3s; }
+
+/*----- BOTÕES -----*/
+.botao-agendamento a {
+  display: inline-block;
+  background: #5211A8;
+  border: none;
+  border-radius: 4px;
+  padding: .7rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 1rem;
+  cursor: pointer; }
+
+.botao-agendamento a:hover {
+  background: #00F58B;
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

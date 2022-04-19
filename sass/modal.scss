@@ -70,28 +70,18 @@
     box-sizing: border-box;
 }
 
-.modal button[type="submit"] {
-    display: block;
+.modal a {
+    display: inline-block;
     background: $main_color;
     border: none;
     border-radius: 4px;
     padding: .7rem 2rem;
     font-size: 1rem;
-    color: white;
-    font-family: monospace;
+    color: $main_font_color;
     margin-top: 1rem;
     cursor: pointer;
 }
-
-.modal button[type="submit"]:hover {
-    display: block;
+.modal a:hover {
     background: $sec_color;
-    border: none;
-    border-radius: 4px;
-    padding: .7rem 2rem;
-    font-size: 1rem;
     color: $main_font_color;
-    font-family: monospace;
-    margin-top: 1rem;
-    cursor: pointer;
 }

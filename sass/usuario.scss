@@ -1,0 +1,21 @@
+@import 'vars';
+
+/*----- USUÁRIO -----*/
+
+.user{
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.geral-user {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.financeiro-user li {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+

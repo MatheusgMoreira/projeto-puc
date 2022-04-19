@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema | Agendamentos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script>document.documentElement.className += ' js';</script>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <div class="menu">
+                <ul class="info-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="adm.html">Administrador</a></li>
+                    <li><a href="usuario.html">Usuário</a></li>
+                    <li><a href="agendamento.html">Agendamentos</a></li>
+                    <li><a href="financeiro.html">Financeiro</a></li>
+                </ul>
+                <ul class="login-menu">
+                    <li>
+                    <li class="login" data-modal="abrir"><a href="">Login →</a></li>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <article>
+            <section class="agendamento">
+                <div class="agendamento-tabela">
+                    <div class="tabela">
+                        <form action="" class="form-tabela">
+                            <input type="text" placeholder="Pesquisar" class="tabela-input">
+                            <button class="tabela-button">Buscar</button>
+                        </form>
+                        <table>
+                            <h2 data-mes></h2>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                    <th>Tempo</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>José da Silva</td>
+                                    <td>27/04/2022</td>
+                                    <td>18:00 - 19:00</td>
+                                    <td data-timer></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="botao-agendamento"> 
+                        <a href="cadastro-agendamento.html">Agendar</a> 
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <footer>
+            <div class="rodape">
+                <h3>Contato</h3>
+                <div class="info-cont">
+                    <ul>
+                        <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
+                        <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
+                    </ul>
+                </div>
+                <div class="redes-sociais">
+                    <a href=""><img src="media/facebook.png" alt=""></a>
+                    <a href=""><img src="media/instagram.png" alt=""></a>
+                    <a href=""><img src="media/twitter.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" for="email" name="email" id="email">
+                <label for="senha">Senha</label>
+                <input type="password" for="senha" name="senha" id="senha">
+                <a href="adm.html">Entrar</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

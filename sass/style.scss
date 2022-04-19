@@ -1,5 +1,12 @@
 @import 'vars';
 @import 'modal';
+@import 'home';
+@import 'administrador';
+@import 'usuario';
+@import 'cadastro';
+@import 'agendamento';
+@import 'financeiro';
+@import 'cadastro-agendamento.scss';
 
 /*----- GERAL -----*/
 
@@ -40,7 +47,7 @@ header {
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background: linear-gradient(236.85deg, #110045 27.26%, #5211A8 96.03%);
+    background: linear-gradient(236.85deg, #2a00a9 27.26%, #3c00ff 45.26%, #8b61bd 96.03%);
     color: $main_font_color;
 }
 
@@ -62,7 +69,7 @@ header {
     padding: .5rem;
 }
 
-.info-menu li:hover, a:hover {
+.info-menu li:hover, .info-menu a:hover {
   text-decoration: underline;
   transform: translateY(-10px);
 }
@@ -88,136 +95,7 @@ article {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.intro, .instruct, .faq {
-    grid-column: 2 / 5;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-top: 3rem;
-}
-
-/*----- INTRODUÇÃO -----*/
-
-.intro h2 {
-    grid-column: 1 / 6;
-}
-
-.intro p {
-    grid-column: 1 / 6;
-    text-align: center;
-}
-
-/*----- INSTRUCT -----*/
-
-.instruct h2 {
-    grid-column: 1 / 6;
-}
-
-.instruct h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.instruct p {
-    text-align: center;
-}
-
-.instruct img {
-    grid-column: 1 / 6;
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 5rem;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5)
-}
-
-.p-1 {
-    grid-column: 1 / 2;
-    width: 100%;
-    background: $grad_color;
-    color: $main_font_color;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.p-2 {
-    grid-column: 3 / 4;
-    width: 100%;
-    padding: 1rem;
-    color: $sec_font_color;
-}
-
-.p-3 {
-    grid-column: 5 / 6;
-    width: 100%;
-    background: $grad_color;
-    color: $main_font_color;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-/*----- FAQ -----*/
-
-.faq-lista {
-    grid-column: 1 / 6;
-}
-
-.faq h2 {
-    grid-column: 1 / 6;
-}
-
-.faq-lista dt {
-    font-size: 1.5rem;
-    font-weight: bold;  
-    margin-bottom: .5rem;
-    color: $main_color;
-    cursor: pointer;
-}
-  
-.faq-lista dt::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 10px;
-    margin-right: 10px;
-    background: $sec_color;
-}
-  
-.faq-lista dd {
-    margin-bottom: .5rem;
-    margin-left: 30px;
-}
-
-.js [data-anime="accordion"] dd {
-  display: none;
-}
-
-[data-anime="accordion"] dt::after {
-  content: '⬎';
-  margin-left: 10px;
-}
-
-[data-anime="accordion"] dt.ativo::after {
-  content: '⬏';
-}
-
-[data-anime="accordion"] dd.ativo {
-  display: block;
-  animation: slideDown .5s forwards;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    max-height: 200px;
-    opacity: 1;
-  }
-}
-
-/*----- CONTATO -----*/
+/*----- RODAPÉ -----*/
 
 footer {
     grid-column: 1 / 6;
@@ -264,29 +142,10 @@ footer {
     width: 32px;
 }
 
-/*----- USUÁRIO -----*/
-
-.user {
-    grid-column: 1 / 6;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
 /*----- TABELA -----*/
-
-.geral-user {
-    grid-column: 1 / 6;
-    text-align: center;
-    margin: 0 auto;
-}
 
 .info-user, .financeiro-user, .uso-user {
     margin: 0 auto;
-}
-
-.financeiro-user li {
-    font-size: 1.5rem;
-    padding: 1rem;
 }
 
 .tabela {
@@ -336,7 +195,6 @@ table {
 }
 
 .tabela button {
-    font-family: 'Hubballi', cursive;
     font-weight: bold;
     font-size: 1.2em;
     background: $main_color;
@@ -355,6 +213,28 @@ table {
     border-radius: 20px;
     transition: .3s;
 }
+
+/*----- BOTÕES -----*/
+
+.botao-agendamento a {
+    display: inline-block;
+    background: $main_color;
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: $main_font_color;
+    margin: 0 auto;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.botao-agendamento a:hover {
+    background: $sec_color;
+    color: $main_font_color;
+}
+
+
 
 
 

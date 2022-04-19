@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema | Administrador</title>
+    <title>Sistema | Usuário</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
@@ -34,20 +34,18 @@
                     <li><a href="financeiro.html">Financeiro</a></li>
                 </ul>
                 <ul class="login-menu">
-                    <li><li class="login" data-modal="abrir"><a href="">Login →</a></li></li>
+                    <li>
+                    <li class="login" data-modal="abrir"><a href="">Login →</a></li>
+                    </li>
                 </ul>
             </div>
         </header>
 
         <article>
-            <section class="adm">
+            <section class="user">
                 <div class="geral-adm">
-                    <div class="info-adm">
+                    <div class="info-user">
                         <div class="tabela">
-                            <form action="" class="form-tabela">
-                                <input type="text" placeholder="Pesquisar" class="tabela-input">
-                                <button class="tabela-button">Buscar</button>
-                            </form>
                             <table>
                                 <h2>José da Silva</h2>
                                 <thead>
@@ -58,7 +56,7 @@
                                         <th>Vaga</th>
                                     </tr>
                                 </thead>
-            
+
                                 <tbody>
                                     <tr>
                                         <td>1</td>
@@ -67,7 +65,7 @@
                                         <td>1</td>
                                     </tr>
                                 </tbody>
-    
+
                                 <thead>
                                     <tr>
                                         <th>Carro</th>
@@ -76,7 +74,7 @@
                                         <th>Telefone</th>
                                     </tr>
                                 </thead>
-    
+
                                 <tbody>
                                     <tr>
                                         <td>Renault Zoe</td>
@@ -91,23 +89,46 @@
 
                     <div class="uso-user">
                         <div class="tabela">
-                            <h2>Utilização</h2>
+                            <h2>Próxima utilização</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Hora</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>27/04/2022</td>
+                                        <td>18:00 - 19:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        <div class="botao-agendamento"> 
+                            <a href="cadastro-agendamento.html">Agendar</a> 
+                        </div>
+                                  
+                    </div>
+
+                    <div class="uso-user">
+                        <div class="tabela">
+                            <h2>Suas utilizações no mês</h2>
                             <table>
                                 <thead>
                                     <tr>
                                         <th>N° de usos</th>
                                         <th>Tempo de uso</th>
                                         <th>Último uso</th>
-                                        <th>Próximo uso</th>
                                     </tr>
                                 </thead>
-            
+
                                 <tbody>
                                     <tr>
                                         <td>10</td>
                                         <td>15h</td>
                                         <td>17/04/2022</td>
-                                        <td>27/04/2022</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -116,9 +137,12 @@
 
                     <div class="financeiro-user">
                         <ul>
-                            
+
                             <div class="tabela">
                                 <h2>Histórico de pagamentos</h2>
+                                <ul>
+                                    <li>Próximo pagamento: 03/05/2022</li>
+                                </ul>
                                 <table>
                                     <thead>
                                         <tr>
@@ -126,7 +150,7 @@
                                             <th>Valor</th>
                                         </tr>
                                     </thead>
-                
+
                                     <tbody>
                                         <tr>
                                             <td>03/04/2022</td>
@@ -140,7 +164,7 @@
                                             <td>03/02/2022</td>
                                             <td>R$ 154,89</td>
                                         </tr>
-                                    </tbody>                                    
+                                    </tbody>
                                 </table>
                                 <ul>
                                     <li>Débitos: Não</li>

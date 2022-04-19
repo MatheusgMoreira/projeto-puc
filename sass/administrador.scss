@@ -1,0 +1,20 @@
+@import 'vars';
+
+/*----- ADMINISTRADOR -----*/
+
+.adm {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.geral-adm {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.financeiro-adm li {
+    font-size: 1.5rem;
+    padding: 1rem;
+}

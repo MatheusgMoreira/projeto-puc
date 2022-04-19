@@ -1,0 +1,16 @@
+@import 'vars';
+
+/*----- FINANCEIRO -----*/
+
+.financeiro {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.financeiro-tabela {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 13rem;
+}
