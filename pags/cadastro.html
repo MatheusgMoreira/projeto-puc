@@ -20,6 +20,7 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/cadastro.js"></script>
 </head>
 
 <body>
@@ -48,21 +49,21 @@
                     <form action="">
                         <div class="c-1">
                             <label for="nome">Nome:</label>
-                            <input type="text">
+                            <input type="text" name="nome" id="nome">
                             <label for="cpf">CPF:</label>
-                            <input type="text">
+                            <input type="number" name="cpf" id="cpf">
                             <label for="carro">Modelo de carro:</label>
-                            <input type="text">
+                            <input type="text" name="carro" id="carro">
                         </div>
                         <div class="c-2">
-                            <label type="email" for="email">E-mail:</label>
-                            <input type="text">
-                            <label type="tel" for="Telefone">Telefone:</label>
-                            <input type="text">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" name="telefone" id="telefone">
                             <label for="vaga">Nº da vaga:</label>
-                            <input type="text">
+                            <input type="number" name="vaga" id="vaga">
                         </div>
-                        <button>Cadastrar</button>
+                        <button type="button" onclick="cadastrarPessoa()">Cadastrar</button>
                     </form>
                 </div>
             </section>
@@ -91,9 +92,9 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text" for="email" name="email" id="email">
+                <input type="text">
                 <label for="senha">Senha</label>
-                <input type="password" for="senha" name="senha" id="senha">
+                <input type="password">
                 <a href="adm.html">Entrar</a>
                 <a href="cadastro.html">Cadastre-se</a>
             </form>
@@ -101,6 +102,7 @@
     </section>
 
     <script type="module" src="../js/script.js"></script>
+    
 </body>
 
 </html>
