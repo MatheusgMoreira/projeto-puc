@@ -21,6 +21,10 @@
 
     
     <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/cadastro.js"></script>
+    <script>
+
+    </script>
 </head>
 
 <body onload="carregaListaPessoas()">
@@ -40,120 +44,7 @@
             </div>
         </header>
 
-        <article>
-            <section class="adm">
-                <div class="geral-adm">
-                    <div class="info-adm">
-                        <div class="tabela">
-                            <form action="" class="form-tabela">
-                                <input type="text" placeholder="Pesquisar" class="tabela-input">
-                                <button class="tabela-button">Buscar</button>
-                            </form>
-                            <table>
-                                <img class="user-img" src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png" alt="">
-                                <h2>José da Silva</h2>
-                                <thead>
-                                    <tr>
-                                        <th>Prédio</th>
-                                        <th>Andar</th>
-                                        <th>Apartamento</th>
-                                        <th>Vaga</th>
-                                    </tr>
-                                </thead>
-            
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>11</td>
-                                        <td>1</td>
-                                    </tr>
-                                </tbody>
-    
-                                <thead>
-                                    <tr>
-                                        <th>Carro</th>
-                                        <th>Cpf</th>
-                                        <th>E-mail</th>
-                                        <th>Telefone</th>
-                                    </tr>
-                                </thead>
-    
-                                <tbody>
-                                    <tr>
-                                        <td>Renault Zoe</td>
-                                        <td>123.456.789-10</td>
-                                        <td>josesilva@gmail</td>
-                                        <td>(31) 9 1234-5678</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="uso-user">
-                        <div class="tabela">
-                            <h2>Utilização</h2>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>N° de usos</th>
-                                        <th>Tempo de uso</th>
-                                        <th>Último uso</th>
-                                        <th>Próximo uso</th>
-                                    </tr>
-                                </thead>
-            
-                                <tbody>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>15h</td>
-                                        <td>17/04/2022</td>
-                                        <td>27/04/2022</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="financeiro-user">
-                        <ul>
-                            
-                            <div class="tabela">
-                                <h2>Histórico de pagamentos</h2>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-                
-                                    <tbody>
-                                        <tr>
-                                            <td>03/04/2022</td>
-                                            <td>R$ 102,54</td>
-                                        </tr>
-                                        <tr>
-                                            <td>03/03/2022</td>
-                                            <td>R$ 90,35</td>
-                                        </tr>
-                                        <tr>
-                                            <td>03/02/2022</td>
-                                            <td>R$ 154,89</td>
-                                        </tr>
-                                    </tbody>                                    
-                                </table>
-                                <ul>
-                                    <li>Débitos: Não</li>
-                                </ul>
-                            </div>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-
+        <article>            
             <section id="consulta">
                 <div class="consulta">
                     <div class="form-pesquisa">
@@ -179,25 +70,24 @@
                         </form>
                     </div>
 
-                    <div>
-                        <table class="tabela">
+                    <div class="row">
+                        <div class="col">
+                          <table class="table">
                             <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Carro</th>
-                                    <th>E-mail</th>
-                                    <th>Telefone</th>
-                                    <th>Vaga</th>
-                                </tr>
-
-                                <tbody id="listaPessoas">
-
-                                </tbody>
+                              <tr>
+                                <th>Data</th>
+                                <th>Tipo</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th></th>
+                              </tr>
                             </thead>
-                        </table>
-                    </div>
-                </div>
+                  
+                            <tbody id="listaPessoas">
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
             </section>
         </article>
 
@@ -236,7 +126,6 @@
     </section>
 
     <script type="module" src="../js/script.js"></script>
-    <script src="cadastro.html"></script>
 </body>
 
 </html>
