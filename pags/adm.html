@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+    
     <script>document.documentElement.className += ' js';</script>
 </head>
 
-<body>
+<body onload="carregaListaPessoas()">
     <div class="main-container">
         <header>
             <div class="menu">
@@ -152,7 +153,55 @@
 
                 </div>
             </section>
+
+            <section id="consulta">
+                <div class="consulta">
+                    <div class="form-pesquisa">
+                        <h2>Pesquisa</h2>
+                        <form action="">
+                            <div class="c-1">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome">
+                                <label for="cpf">CPF:</label>
+                                <input type="number" name="cpf" id="cpf">
+                                <label for="carro">Modelo de carro:</label>
+                                <input type="text" name="carro" id="carro">
+                            </div>
+                            <div class="c-2">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email">
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" name="telefone" id="telefone">
+                                <label for="vaga">Nº da vaga:</label>
+                                <input type="number" name="vaga" id="vaga">
+                            </div>
+                            <button type="button" onclick="pesquisarPessoa()">Cadastrar</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <table class="tabela">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Carro</th>
+                                    <th>E-mail</th>
+                                    <th>Telefone</th>
+                                    <th>Vaga</th>
+                                </tr>
+
+                                <tbody id="listaPessoas">
+
+                                </tbody>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </article>
+
+
 
         <footer>
             <div class="rodape">
@@ -177,9 +226,9 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text" for="email" name="email" id="email">
+                <input type="text" for="email" name="email">
                 <label for="senha">Senha</label>
-                <input type="password" for="senha" name="senha" id="senha">
+                <input type="password" for="senha" name="senha" >
                 <a href="adm.html">Entrar</a>
                 <a href="cadastro.html">Cadastre-se</a>
             </form>
@@ -187,6 +236,7 @@
     </section>
 
     <script type="module" src="../js/script.js"></script>
+    <script src="cadastro.html"></script>
 </body>
 
 </html>
