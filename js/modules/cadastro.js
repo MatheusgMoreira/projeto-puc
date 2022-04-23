@@ -185,8 +185,7 @@ function carregaListaPessoas(pessoas = Array(), filtro = false) {
 
     //Botão de excluír
   let btn = document.createElement('button')
-  btn.className = 'botao-excluir'
-  btn.innerHTML = '<i></i>'
+  btn.innerHTML = '<i>Excluir</i>'
   btn.id = `id_pessoa_${d.id}`
   btn.onclick = function(){
           

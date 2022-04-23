@@ -48,51 +48,53 @@
 
         <article>
             <section class="adm">
-                <div class="form-adm">
-                    <h2>Pesquisa</h2>
-                    <form action="">
-                        <div class="c-1">
-                            <label for="nome">Nome:</label>
-                            <input type="text" name="nome" id="nome">
-                            <label for="cpf">CPF:</label>
-                            <input type="number" name="cpf" id="cpf">
-                            <label for="carro">Modelo de carro:</label>
-                            <input type="text" name="carro" id="carro">
-                        </div>
-                        <div class="c-2">
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email" id="email">
-                            <label for="telefone">Telefone:</label>
-                            <input type="tel" name="telefone" id="telefone">
-                            <label for="vaga">Nº da vaga:</label>
-                            <input type="number" name="vaga" id="vaga">
-                        </div>
-                        <button type="button" onclick="cadastrarPessoa()">Pesquisar</button>
-                    </form>
+                <div class="geral-adm">
+                    <div class="form-adm">
+                        <h2>Pesquisa</h2>
+                        <form action="">
+                            <div class="c-1">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome">
+                                <label for="cpf">CPF:</label>
+                                <input type="number" name="cpf" id="cpf">
+                                <label for="carro">Modelo de carro:</label>
+                                <input type="text" name="carro" id="carro">
+                            </div>
+                            <div class="c-2">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email">
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" name="telefone" id="telefone">
+                                <label for="vaga">Nº da vaga:</label>
+                                <input type="number" name="vaga" id="vaga">
+                            </div>
+                            <button type="button" onclick="pesquisarPessoa()">Pesquisar</button>
+                        </form>
+                    </div>
+    
+                    
                 </div>
             </section>
 
-            <section>
-                <div class="tabela-adm">
-                    <table class="tabela">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th>Carro</th>
-                                <th>E-mail</th>
-                                <th>Telefone</th>
-                                <th>Vaga</th>
-                                <th></th>
-                            </tr>
-                        </thead>
+            <div class="tabela-adm">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Carro</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Vaga</th>
+                            <th></th>
+                        </tr>
+                    </thead>
 
-                        <tbody id="listaPessoas">
-                            <td></td>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                    <tbody id="listaPessoas">
+                        <td></td>
+                    </tbody>
+                </table>
+            </div>
         </article>
 
 

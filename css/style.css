@@ -219,10 +219,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 
+.geral-adm {
+  grid-column: 1 / 6;
+  text-align: center;
+  margin: 0 auto; }
+
 .form-adm {
   grid-column: 1 / 6;
   margin: 0 auto;
-  margin: 8rem 8rem 4rem 8rem; }
+  margin: 8rem 8rem 2rem 8rem; }
+
+.tabela-adm {
+  text-align: center;
+  margin: 0 auto; }
 
 .form-adm h2 {
   grid-column: 1 / 6; }
@@ -285,26 +294,6 @@
 
 .c-2 {
   grid-column: 3 / 4; }
-
-.tabela-adm {
-  text-align: center; }
-
-.botao-excluir {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: #5211A8;
-  color: #fff;
-  margin-top: 5px;
-  -webkit-transition: .3s;
-  transition: .3s;
-  position: relative;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  top: -7px; }
 
 /*----- USUÁRIO -----*/
 .user {

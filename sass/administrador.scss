@@ -8,10 +8,21 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+.geral-adm {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .form-adm {
     grid-column: 1 / 6;
     margin: 0 auto;
-    margin: 8rem 8rem 4rem 8rem;
+    margin: 8rem 8rem 2rem 8rem;
+}
+
+.tabela-adm {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .form-adm h2 {
@@ -84,21 +95,3 @@
     grid-column:  3 / 4;
 }
 
-.tabela-adm {
-    text-align: center;
-}
-
-.botao-excluir {
-    content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: $main_color;
-        color: $main_font_color;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-        transform: rotate(135deg);
-        transform: rotate(-135deg);
-        top: -7px;
-}
