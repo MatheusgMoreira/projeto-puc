@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    
+
     <script>document.documentElement.className += ' js';</script>
     <script src="../js/modules/cadastro.js"></script>
     <script>
@@ -39,58 +39,61 @@
                     <li><a href="financeiro.html">Financeiro</a></li>
                 </ul>
                 <ul class="login-menu">
-                    <li><li class="login" data-modal="abrir"><a href="">Login →</a></li></li>
+                    <li>
+                    <li class="login" data-modal="abrir"><a href="">Login →</a></li>
+                    </li>
                 </ul>
             </div>
         </header>
 
-        <article>            
-            <section id="consulta">
-                <div class="consulta">
-                    <div class="form-pesquisa">
-                        <h2>Pesquisa</h2>
-                        <form action="">
-                            <div class="c-1">
-                                <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome">
-                                <label for="cpf">CPF:</label>
-                                <input type="number" name="cpf" id="cpf">
-                                <label for="carro">Modelo de carro:</label>
-                                <input type="text" name="carro" id="carro">
-                            </div>
-                            <div class="c-2">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" id="email">
-                                <label for="telefone">Telefone:</label>
-                                <input type="tel" name="telefone" id="telefone">
-                                <label for="vaga">Nº da vaga:</label>
-                                <input type="number" name="vaga" id="vaga">
-                            </div>
-                            <button type="button" onclick="pesquisarPessoa()">Cadastrar</button>
-                        </form>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th>Data</th>
-                                <th>Tipo</th>
-                                <th>Descrição</th>
-                                <th>Valor</th>
-                                <th></th>
-                              </tr>
-                            </thead>
-                  
-                            <tbody id="listaPessoas">
-                            </tbody>
-                          </table>
+        <article>
+            <section class="adm">
+                <div class="form-adm">
+                    <h2>Pesquisa</h2>
+                    <form action="">
+                        <div class="c-1">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome">
+                            <label for="cpf">CPF:</label>
+                            <input type="number" name="cpf" id="cpf">
+                            <label for="carro">Modelo de carro:</label>
+                            <input type="text" name="carro" id="carro">
                         </div>
-                      </div>
+                        <div class="c-2">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" name="telefone" id="telefone">
+                            <label for="vaga">Nº da vaga:</label>
+                            <input type="number" name="vaga" id="vaga">
+                        </div>
+                        <button type="button" onclick="cadastrarPessoa()">Pesquisar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="tabela-adm">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Carro</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                                <th>Vaga</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaPessoas">
+                            <td></td>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </article>
-
 
 
         <footer>
@@ -118,7 +121,7 @@
                 <label for="email">Email</label>
                 <input type="text" for="email" name="email">
                 <label for="senha">Senha</label>
-                <input type="password" for="senha" name="senha" >
+                <input type="password" for="senha" name="senha">
                 <a href="adm.html">Entrar</a>
                 <a href="cadastro.html">Cadastre-se</a>
             </form>

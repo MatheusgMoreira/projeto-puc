@@ -8,13 +8,97 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.geral-adm {
+.form-adm {
     grid-column: 1 / 6;
-    text-align: center;
     margin: 0 auto;
+    margin: 8rem 8rem 4rem 8rem;
 }
 
-.financeiro-adm li {
+.form-adm h2 {
+    grid-column: 1 / 6;
+}
+
+.form-adm form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: min-content;
+    margin: 0 auto;
+    padding: 4rem;
+    border: 1px solid $main_color;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.form-adm label {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
     font-size: 1.5rem;
-    padding: 1rem;
+    font-weight: bold;
+}
+
+.form-adm input {
+    width: 300px;
+    height: 1.5rem;
+    padding: .3rem;
+    background: $grad_color_2;
+    color: $main_font_color;
+    border-radius: 5px;
+    border: none;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        calc(100% - 12px) 100%,
+        0 100%
+    );
+}
+
+.form-adm input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.form-adm button {
+    grid-column: 1 / 6;
+    display: block;
+    margin: 0 auto;
+    background: $main_color;
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: $main_font_color;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.form-adm button:hover {
+    background: $sec_color;
+    color: $main_font_color;
+}
+.c-1 {
+    grid-column:  1 / 2;
+}
+
+.c-2 {
+    grid-column:  3 / 4;
+}
+
+.tabela-adm {
+    text-align: center;
+}
+
+.botao-excluir {
+    content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: $main_color;
+        color: $main_font_color;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        transform: rotate(135deg);
+        transform: rotate(-135deg);
+        top: -7px;
 }
