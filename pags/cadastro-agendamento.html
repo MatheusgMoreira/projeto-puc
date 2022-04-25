@@ -47,39 +47,48 @@
                     <h2>Agendamento</h2>
                     <form action="">
                         <div class="c-1">
-                            <label for="nome">Nome:</label>
-                            <input type="text">
-                            <label for="data">Data:</label>
-                            <input type="datetime-local">
+                            <div class="label-float">
+                                <input type="text" required>
+                                <label for="nome">Nome:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="number" required>
+                                <label for="number">Data:</label>
+                            </div>
                         </div>
                         <div class="c-2">
-                            <label type="text" for="cpf">CPF:</label>
-                            <input type="text">
-                            <label type="tel" for="Telefone">Telefone:</label>
-                            <input type="text">
+                            <div class="label-float">
+                                <input type="number" name="cpf" required>
+                                <label for="text" for="cpf">CPF:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="tel" required>
+                                <label for="tel" for="Telefone">Telefone:</label>
+                            </div>
                         </div>
                         <button>Agendar</button>
-                    </form>
                 </div>
-            </section>
-        </article>
+                </form>
+    </div>
+    </section>
+    </article>
 
-        <footer>
-            <div class="rodape">
-                <h3>Contato</h3>
-                <div class="info-cont">
-                    <ul>
-                        <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
-                        <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
-                    </ul>
-                </div>
-                <div class="redes-sociais">
-                    <a href=""><img src="../media/facebook.png" alt=""></a>
-                    <a href=""><img src="../media/instagram.png" alt=""></a>
-                    <a href=""><img src="../media/twitter.png" alt=""></a>
-                </div>
+    <footer>
+        <div class="rodape">
+            <h3>Contato</h3>
+            <div class="info-cont">
+                <ul>
+                    <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
+                    <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
+                </ul>
             </div>
-        </footer>
+            <div class="redes-sociais">
+                <a href=""><img src="../media/facebook.png" alt=""></a>
+                <a href=""><img src="../media/instagram.png" alt=""></a>
+                <a href=""><img src="../media/twitter.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
     </div>
 
     <section class="modal-container" data-modal="container">
@@ -90,8 +99,8 @@
                 <input type="text" for="email" name="email" id="email">
                 <label for="senha">Senha</label>
                 <input type="password" for="senha" name="senha" id="senha">
-                <a href="adm.html">Entrar</a>
-                <a href="cadastro.html">Cadastre-se</a>
+                <button href="adm.html">Entrar</button>
+                <p>Não possui conta? <a href="cadastro.html">Cadastre-se</a></p>
             </form>
         </div>
     </section>

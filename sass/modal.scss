@@ -70,7 +70,7 @@
     box-sizing: border-box;
 }
 
-.modal a {
+.modal form button {
     display: inline-block;
     background: $main_color;
     border: none;
@@ -80,8 +80,23 @@
     color: $main_font_color;
     margin-top: 1rem;
     cursor: pointer;
+    transition: all .3s ease-out;
 }
-.modal a:hover {
+.modal form button:hover {
     background: $sec_color;
     color: $main_font_color;
+}
+
+.modal p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.modal a {
+    color: $third_font_color;
+    transition: all .3s ease-out;
+}
+
+.modal a:hover {
+    color: $fourth_font_color;
 }

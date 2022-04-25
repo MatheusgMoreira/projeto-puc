@@ -227,6 +227,7 @@ table {
     margin: 0 auto;
     margin-top: 1rem;
     cursor: pointer;
+    transition: all .3s ease-out;
 }
 
 .botao-agendamento a:hover {

@@ -60,6 +60,7 @@
     color: $sec_font_color;
     border: 1px solid $main_color;
     border-radius: 10px;
+    transition: all .3s ease-out;
 }
 
 .p-3 {

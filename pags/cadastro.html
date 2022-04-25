@@ -48,20 +48,32 @@
                     <h2>Cadastro</h2>
                     <form action="">
                         <div class="c-1">
-                            <label for="nome">Nome:</label>
-                            <input type="text" name="nome" id="nome">
-                            <label for="cpf">CPF:</label>
-                            <input type="number" name="cpf" id="cpf">
-                            <label for="carro">Modelo de carro:</label>
-                            <input type="text" name="carro" id="carro">
+                            <div class="label-float">
+                                <input type="text" name="nome" id="nome" required>
+                                <label for="nome">Nome:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="number" name="cpf" id="cpf" required>
+                                <label for="cpf">CPF:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="text" name="carro" id="carro" required>
+                                <label for="carro">Modelo de carro:</label>
+                            </div>
                         </div>
                         <div class="c-2">
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email" id="email">
-                            <label for="telefone">Telefone:</label>
-                            <input type="tel" name="telefone" id="telefone">
-                            <label for="vaga">Nº da vaga:</label>
-                            <input type="number" name="vaga" id="vaga">
+                            <div class="label-float">
+                                <input type="email" name="email" id="email" required>
+                                <label for="email">E-mail:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="tel" name="telefone" id="telefone" required>
+                                <label for="telefone">Telefone:</label>
+                            </div>
+                            <div class="label-float">
+                                <input type="number" name="vaga" id="vaga" required>
+                                <label for="vaga">Nº da vaga:</label>
+                            </div>
                         </div>
                         <button type="button" onclick="cadastrarPessoa()">Cadastrar</button>
                     </form>
@@ -92,17 +104,17 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text">
+                <input type="text" for="email" name="email" id="email">
                 <label for="senha">Senha</label>
-                <input type="password">
-                <a href="adm.html">Entrar</a>
-                <a href="cadastro.html">Cadastre-se</a>
+                <input type="password" for="senha" name="senha" id="senha">
+                <button href="adm.html">Entrar</button>
+                <p>Não possui conta? <a href="cadastro.html">Cadastre-se</a></p>
             </form>
         </div>
     </section>
 
     <script type="module" src="../js/script.js"></script>
-    
+
 </body>
 
 </html>

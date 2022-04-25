@@ -78,7 +78,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.modal a {
+.modal form button {
   display: inline-block;
   background: #5211A8;
   border: none;
@@ -87,11 +87,25 @@
   font-size: 1rem;
   color: #fff;
   margin-top: 1rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
-.modal a:hover {
+.modal form button:hover {
   background: #00F58B;
   color: #fff; }
+
+.modal p {
+  margin-top: 1rem;
+  font-size: 1rem; }
+
+.modal a {
+  color: #5211A8;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+.modal a:hover {
+  color: #00F58B; }
 
 .intro, .instruct, .faq {
   grid-column: 2 / 5;
@@ -143,7 +157,9 @@
   padding: 1rem;
   color: #333;
   border: 1px solid #5211A8;
-  border-radius: 10px; }
+  border-radius: 10px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .p-3 {
   grid-column: 5 / 6;
@@ -224,14 +240,14 @@
   text-align: center;
   margin: 0 auto; }
 
+.tabela-adm {
+  text-align: center;
+  margin: 0 auto; }
+
 .form-adm {
   grid-column: 1 / 6;
   margin: 0 auto;
   margin: 8rem 8rem 2rem 8rem; }
-
-.tabela-adm {
-  text-align: center;
-  margin: 0 auto; }
 
 .form-adm h2 {
   grid-column: 1 / 6; }
@@ -249,27 +265,43 @@
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
 
-.form-adm label {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left; }
-
-.form-adm input {
-  width: 300px;
-  height: 1.5rem;
-  padding: .3rem;
-  color: #333;
+.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
   border: 0;
-  border-bottom: 1px solid #5211A8;
-  background: transparent; }
+  border-bottom: 2px solid #5211A8;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 1rem;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  border-radius: 0; }
 
-.form-adm input:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  outline: 0; }
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 15%;
+  margin-bottom: 15%; }
+
+.label-float input:focus {
+  border-bottom: 2px solid #4038a0; }
+
+.label-float label {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: #5211A8; }
 
 .form-adm button {
   grid-column: 1 / 6;
@@ -282,17 +314,21 @@
   font-size: 1rem;
   color: #fff;
   margin-top: 2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .form-adm button:hover {
   background: #00F58B;
   color: #fff; }
 
 .c-1 {
-  grid-column: 1 / 2; }
+  grid-column: 1 / 2;
+  padding: .5rem; }
 
 .c-2 {
-  grid-column: 3 / 4; }
+  grid-column: 3 / 4;
+  padding: .5rem; }
 
 /*----- USUÁRIO -----*/
 .user {
@@ -342,27 +378,43 @@
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
 
-.form-cadastro label {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left; }
-
-.form-cadastro input {
-  width: 300px;
-  height: 1.5rem;
-  padding: .3rem;
-  color: #333;
+.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
   border: 0;
-  border-bottom: 1px solid #5211A8;
-  background: transparent; }
+  border-bottom: 2px solid #5211A8;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 1rem;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  border-radius: 0; }
 
-.form-cadastro input:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  outline: 0; }
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 15%;
+  margin-bottom: 15%; }
+
+.label-float input:focus {
+  border-bottom: 2px solid #4038a0; }
+
+.label-float label {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: #5211A8; }
 
 .form-cadastro button {
   grid-column: 1 / 6;
@@ -375,17 +427,21 @@
   font-size: 1rem;
   color: #fff;
   margin-top: 2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .form-cadastro button:hover {
   background: #00F58B;
   color: #fff; }
 
 .c-1 {
-  grid-column: 1 / 2; }
+  grid-column: 1 / 2;
+  padding: .5rem; }
 
 .c-2 {
-  grid-column: 3 / 4; }
+  grid-column: 3 / 4;
+  padding: .5rem; }
 
 /*----- AGENDAMENTO -----*/
 .agendamento {
@@ -438,27 +494,43 @@
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
 
-.form-cad-agd label {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left; }
-
-.form-cad-agd input {
-  width: 300px;
-  height: 1.5rem;
-  padding: .3rem;
-  color: #333;
+.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
   border: 0;
-  border-bottom: 1px solid #5211A8;
-  background: transparent; }
+  border-bottom: 2px solid #5211A8;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 1rem;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  border-radius: 0; }
 
-.form-cad-agd input:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  outline: 0; }
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 15%;
+  margin-bottom: 15%; }
+
+.label-float input:focus {
+  border-bottom: 2px solid #4038a0; }
+
+.label-float label {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: #5211A8; }
 
 .form-cad-agd button {
   grid-column: 1 / 6;
@@ -471,17 +543,21 @@
   font-size: 1rem;
   color: #fff;
   margin-top: 2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .form-cad-agd button:hover {
   background: #00F58B;
   color: #fff; }
 
 .c-1 {
-  grid-column: 1 / 2; }
+  grid-column: 1 / 2;
+  padding: .5rem; }
 
 .c-2 {
-  grid-column: 3 / 4; }
+  grid-column: 3 / 4;
+  padding: .5rem; }
 
 /*----- GERAL -----*/
 * {
@@ -667,7 +743,9 @@ table {
   color: #fff;
   margin: 0 auto;
   margin-top: 1rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .botao-agendamento a:hover {
   background: #00F58B;
