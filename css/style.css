@@ -254,18 +254,17 @@
   margin-top: 2rem;
   margin-bottom: .5rem;
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: left; }
 
 .form-adm input {
   width: 300px;
   height: 1.5rem;
   padding: .3rem;
-  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #5211A8;
+  background: transparent; }
 
 .form-adm input:focus {
   -webkit-box-shadow: 0 0 0 0;
@@ -348,18 +347,17 @@
   margin-top: 2rem;
   margin-bottom: .5rem;
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: left; }
 
 .form-cadastro input {
   width: 300px;
   height: 1.5rem;
   padding: .3rem;
-  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #5211A8;
+  background: transparent; }
 
 .form-cadastro input:focus {
   -webkit-box-shadow: 0 0 0 0;
@@ -445,18 +443,17 @@
   margin-top: 2rem;
   margin-bottom: .5rem;
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: left; }
 
 .form-cad-agd input {
   width: 300px;
   height: 1.5rem;
   padding: .3rem;
-  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #5211A8;
+  background: transparent; }
 
 .form-cad-agd input:focus {
   -webkit-box-shadow: 0 0 0 0;

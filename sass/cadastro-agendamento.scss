@@ -35,22 +35,17 @@
     margin-bottom: .5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .form-cad-agd input {
     width: 300px;
     height: 1.5rem;
     padding: .3rem;
-    background: $grad_color_2;
-    color: $main_font_color;
-    border-radius: 5px;
-    border: none;
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        calc(100% - 12px) 100%,
-        0 100%
-    );
+    color: $sec_font_color;
+    border: 0;
+    border-bottom: 1px solid $main_color ;
+    background: transparent;
 }
 
 .form-cad-agd input:focus {
