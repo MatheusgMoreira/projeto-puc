@@ -41,6 +41,13 @@ a {
     color: $sec_font_color;
 }
 
+hr {
+    grid-column: 1 / 6;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
 /*----- CABEÇALHO -----*/
 
 header {
