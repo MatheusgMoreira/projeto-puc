@@ -20,6 +20,7 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/agendamento.js"></script>
 </head>
 
 <body>
@@ -48,47 +49,46 @@
                     <form action="">
                         <div class="c-1">
                             <div class="label-float">
-                                <input type="text" required>
-                                <label for="nome">Nome:</label>
+                                <input type="text" name="nomeAgd" id="nomeAgd" required>
+                                <label for="nomeAgd">Nome:</label>
                             </div>
                             <div class="label-float">
-                                <input type="number" required>
-                                <label for="number">Data:</label>
+                                <input type="number" name="cpfAgd" id="cpfAgd" required>
+                                <label for="cpfAgd">CPF:</label>
                             </div>
                         </div>
                         <div class="c-2">
                             <div class="label-float">
-                                <input type="number" name="cpf" required>
-                                <label for="text" for="cpf">CPF:</label>
+                                <input type="date" name="dia" id="dia" required>
+                                <label for="dia">Dia:</label>
                             </div>
                             <div class="label-float">
-                                <input type="tel" required>
-                                <label for="tel" for="Telefone">Telefone:</label>
+                                <input type="time" name="hora" id="hora" required>
+                                <label for="hora">Hora:</label>
                             </div>
                         </div>
-                        <button>Agendar</button>
+                        <button type="button" onclick="agendarHorario()">Agendar</button>
+                    </form>
                 </div>
-                </form>
-    </div>
-    </section>
-    </article>
+            </section>
+        </article>
 
-    <footer>
-        <div class="rodape">
-            <h3>Contato</h3>
-            <div class="info-cont">
-                <ul>
-                    <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
-                    <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
-                </ul>
+        <footer>
+            <div class="rodape">
+                <h3>Contato</h3>
+                <div class="info-cont">
+                    <ul>
+                        <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
+                        <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
+                    </ul>
+                </div>
+                <div class="redes-sociais">
+                    <a href=""><img src="../media/facebook.png" alt=""></a>
+                    <a href=""><img src="../media/instagram.png" alt=""></a>
+                    <a href=""><img src="../media/twitter.png" alt=""></a>
+                </div>
             </div>
-            <div class="redes-sociais">
-                <a href=""><img src="../media/facebook.png" alt=""></a>
-                <a href=""><img src="../media/instagram.png" alt=""></a>
-                <a href=""><img src="../media/twitter.png" alt=""></a>
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
 
     <section class="modal-container" data-modal="container">
@@ -96,7 +96,7 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text" for="email" name="email" id="email">
+                <input type="text" for="email" name="email">
                 <label for="senha">Senha</label>
                 <input type="password" for="senha" name="senha" id="senha">
                 <button href="adm.html">Entrar</button>
