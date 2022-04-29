@@ -24,7 +24,7 @@
   background: white;
   min-width: 300px;
   padding: 40px;
-  border: 10px solid #5211A8;
+  border: 10px solid #333;
   -webkit-box-shadow: 0 0 0 10px white;
           box-shadow: 0 0 0 10px white;
   position: relative; }
@@ -60,7 +60,7 @@
   top: -30px;
   right: -30px;
   position: absolute;
-  background: #5211A8;
+  background: #333;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   font-size: 1.2rem;
@@ -80,7 +80,7 @@
 
 .modal form button {
   display: inline-block;
-  background: #5211A8;
+  background: #333;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
@@ -92,7 +92,7 @@
   transition: all .3s ease-out; }
 
 .modal form button:hover {
-  background: #00F58B;
+  background: #5211A8;
   color: #fff; }
 
 .modal p {
@@ -105,13 +105,14 @@
   transition: all .3s ease-out; }
 
 .modal a:hover {
-  color: #00F58B; }
+  color: #5211A8; }
 
 .intro, .instruct, .faq {
   grid-column: 2 / 5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  margin: 0 auto; }
 
 /*----- INTRODUÇÃO -----*/
 .intro-1 {
@@ -141,7 +142,8 @@
 
 /*----- INSTRUCT -----*/
 .instruct h2 {
-  grid-column: 1 / 6; }
+  grid-column: 1 / 6;
+  text-align: center; }
 
 .instruct h3 {
   text-align: center;
@@ -160,9 +162,9 @@
 .p-1 {
   grid-column: 1 / 2;
   width: 100%;
-  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
+  background: #333;
   color: #fff;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   padding: 1rem; }
 
@@ -171,7 +173,7 @@
   width: 100%;
   padding: 1rem;
   color: #333;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out; }
@@ -179,14 +181,14 @@
 .p-3 {
   grid-column: 5 / 6;
   width: 100%;
-  background: linear-gradient(230.65deg, #631ebd 27.49%, #6a38ac 83.19%);
+  background: #333;
   color: #fff;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   padding: 1rem; }
 
 .p-2:hover {
-  border: 1px solid #00F58B; }
+  border: 1px solid #5211A8; }
 
 /*----- FAQ -----*/
 .faq-lista {
@@ -199,7 +201,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: .5rem;
-  color: #5211A8;
+  color: #333;
   cursor: pointer; }
 
 .faq-lista dt::before {
@@ -208,7 +210,7 @@
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #00F58B; }
+  background: #5211A8; }
 
 .faq-lista dd {
   margin-bottom: .5rem;
@@ -275,7 +277,7 @@
   width: min-content;
   margin: 0 auto;
   padding: 4rem;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
@@ -285,7 +287,7 @@
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #5211A8;
+  border-bottom: 2px solid #333;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -322,7 +324,7 @@
   grid-column: 1 / 6;
   display: block;
   margin: 0 auto;
-  background: #5211A8;
+  background: #333;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
@@ -334,7 +336,7 @@
   transition: all .3s ease-out; }
 
 .form-adm button:hover {
-  background: #00F58B;
+  background: #5211A8;
   color: #fff; }
 
 .c-1 {
@@ -362,7 +364,7 @@
 
 .user-img {
   width: 30%;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 1000px;
   margin-top: 2rem; }
 
@@ -388,7 +390,7 @@
   width: min-content;
   margin: 0 auto;
   padding: 4rem;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
@@ -398,7 +400,7 @@
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #5211A8;
+  border-bottom: 2px solid #333;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -435,7 +437,7 @@
   grid-column: 1 / 6;
   display: block;
   margin: 0 auto;
-  background: #5211A8;
+  background: #333;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
@@ -447,7 +449,7 @@
   transition: all .3s ease-out; }
 
 .form-cadastro button:hover {
-  background: #00F58B;
+  background: #5211A8;
   color: #fff; }
 
 .c-1 {
@@ -463,12 +465,6 @@
   grid-column: 1 / 6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-
-.agendamento-tabela {
-  grid-column: 1 / 6;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 13rem; }
 
 /*----- FINANCEIRO -----*/
 .financeiro {
@@ -504,7 +500,7 @@
   width: min-content;
   margin: 0 auto;
   padding: 4rem;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
@@ -514,7 +510,7 @@
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #5211A8;
+  border-bottom: 2px solid #333;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -551,7 +547,7 @@
   grid-column: 1 / 6;
   display: block;
   margin: 0 auto;
-  background: #5211A8;
+  background: #333;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
@@ -563,7 +559,7 @@
   transition: all .3s ease-out; }
 
 .form-cad-agd button:hover {
-  background: #00F58B;
+  background: #5211A8;
   color: #fff; }
 
 .c-1 {
@@ -589,7 +585,7 @@ h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #5211A8;
   margin-bottom: 3rem; }
 
 ul, li {
@@ -611,7 +607,7 @@ header {
   grid-column: 1 / 6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background: linear-gradient(236.85deg, #2a00a9 27.26%, #3c00ff 45.26%, #8b61bd 96.03%);
+  background: #333;
   color: #fff; }
 
 .menu {
@@ -643,7 +639,7 @@ header {
   background: #fff; }
 
 .login a:hover {
-  color: #00F58B; }
+  color: #5211A8; }
 
 /*----- CORPO -----*/
 article {
@@ -654,7 +650,7 @@ article {
 /*----- RODAPÉ -----*/
 footer {
   grid-column: 1 / 6;
-  background: linear-gradient(236.85deg, #2a00a9 27.26%, #3c00ff 45.26%, #8b61bd 96.03%);
+  background: #333;
   color: #fff;
   padding: 1.5rem;
   margin-top: 3rem; }
@@ -676,7 +672,7 @@ footer {
 
 .rodape ul li a {
   text-decoration: none;
-  color: #00F58B;
+  color: #5211A8;
   padding-right: .5rem; }
 
 .info-cont {
@@ -702,7 +698,7 @@ table {
 .tabela th {
   font-size: 2em;
   font-weight: bold;
-  color: #5211A8;
+  color: #333;
   margin: 0px;
   padding: .5em;
   border-bottom: 1px solid #333; }
@@ -730,16 +726,16 @@ table {
   font-size: 1.2em;
   background: #fff;
   color: #333;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 20px;
   padding: .5em; }
 
 .tabela button {
   font-weight: bold;
   font-size: 1.2em;
-  background: #5211A8;
+  background: #333;
   color: #fff;
-  border: 1px solid #5211A8;
+  border: 1px solid #333;
   border-radius: 20px;
   padding: .5em;
   text-align: center;
@@ -748,7 +744,7 @@ table {
 
 .tabela button:hover {
   background: #fff;
-  color: #5211A8;
+  color: #333;
   border-radius: 20px;
   -webkit-transition: .3s;
   transition: .3s; }
@@ -756,7 +752,7 @@ table {
 /*----- BOTÕES -----*/
 .botao-agendamento a {
   display: inline-block;
-  background: #5211A8;
+  background: #333;
   border: none;
   border-radius: 4px;
   padding: .7rem 2rem;
@@ -769,7 +765,7 @@ table {
   transition: all .3s ease-out; }
 
 .botao-agendamento a:hover {
-  background: #00F58B;
+  background: #5211A8;
   color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
