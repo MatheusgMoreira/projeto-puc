@@ -2,9 +2,114 @@
 
 /*----- AGENDAMENTO -----*/
 
-.agendamento {
+.agd {
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+.geral-agd {
+    grid-column: 1 / 6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tabela-agd {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-agd {
+    grid-column: 1 / 6;
+    margin: 0 auto;
+    margin: 8rem 8rem 2rem 8rem;
+}
+
+.form-agd h2 {
+    grid-column: 1 / 6;
+}
+
+.form-agd form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: min-content;
+    margin: 0 auto;
+    padding: 4rem;
+    border: 1px solid $main_color;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid $main_color;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 1rem;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #4038a0;
+}
+
+.label-float label {
+    color: $sec_font_color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: $third_font_color;
+}
+
+.form-agd button {
+    grid-column: 1 / 6;
+    display: block;
+    margin: 0 auto;
+    background: $main_color;
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: $main_font_color;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.form-agd button:hover {
+    background: $sec_color;
+    color: $main_font_color;
+}
+.c-1 {
+    grid-column:  1 / 2; 
+    padding: .5rem; 
+}
+
+.c-2 {
+    grid-column:  3 / 4;
+    padding: .5rem; 
+}
+
+.agd-img {
+    width: 40%;
+    margin-bottom: 2rem;
+}

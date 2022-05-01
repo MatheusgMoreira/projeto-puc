@@ -43,32 +43,35 @@
         </header>
 
         <article>
-            <section class="cad-agd">
-                <div class="form-cad-agd">
-                    <h2>Agendamento</h2>
-                    <form action="">
-                        <div class="c-1">
-                            <div class="label-float">
-                                <input type="text" name="nomeAgd" id="nomeAgd" required>
-                                <label for="nomeAgd">Nome:</label>
+            <section class="agd">
+                <div class="geral-agd">
+                    <div class="form-agd">
+                        <img class="agd-img" src="../media/undraw_booking_re_gw4j.svg" alt="">
+                        <h2>Agendamento</h2>
+                        <form action="">
+                            <div class="c-1">
+                                <div class="label-float">
+                                    <input type="text" name="nomeAgd" id="nomeAgd" required>
+                                    <label for="nomeAgd">Nome:</label>
+                                </div>
+                                <div class="label-float">
+                                    <input type="number" name="cpfAgd" id="cpfAgd" required>
+                                    <label for="cpfAgd">CPF:</label>
+                                </div>
                             </div>
-                            <div class="label-float">
-                                <input type="number" name="cpfAgd" id="cpfAgd" required>
-                                <label for="cpfAgd">CPF:</label>
+                            <div class="c-2">
+                                <div class="label-float">
+                                    <input type="text" name="dia" id="dia" required>
+                                    <label for="dia">Dia:</label>
+                                </div>
+                                <div class="label-float">
+                                    <input type="text" name="hora" id="hora" required>
+                                    <label for="hora">Hora:</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="c-2">
-                            <div class="label-float">
-                                <input type="text" name="dia" id="dia" required>
-                                <label for="dia">Dia:</label>
-                            </div>
-                            <div class="label-float">
-                                <input type="text" name="hora" id="hora" required>
-                                <label for="hora">Hora:</label>
-                            </div>
-                        </div>
-                        <button type="button" onclick="pesquisarHorario()">Pesquisar</button>
-                    </form>
+                            <button type="button" >Agendar</button>
+                        </form>
+                    </div>
                 </div>
             </section>
 
