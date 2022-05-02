@@ -6,6 +6,7 @@
 @import 'cadastro';
 @import 'agendamento';
 @import 'financeiro';
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 /*----- GERAL -----*/
 
@@ -17,6 +18,11 @@ html, body {
     margin: 0;
 }
 
+    
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -24,6 +30,7 @@ html, body {
 
 h1 {
     font-size: 5rem;
+    font-family: 'Goldman', cursive;
 }
 
 h2 {

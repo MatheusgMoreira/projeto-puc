@@ -1,6 +1,6 @@
 @import 'vars';
 
-#intro, #instruct, #faq {
+#intro, #img-fundo, #instruct, #faq {
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -17,21 +17,22 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 90vh;
+    
 }
 
 .main-title {
     width: min-content;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
     color: $main_font_color;
     margin-left: 5rem;
     padding: 1rem 3rem; 
     text-align: center;
     border-radius: 10px;
     font-weight: bolder;
+    backdrop-filter: blur(2px);
 }
 
-.main-title::before {
-    filter: blur(10px);
+.main-title p {
+    font-size: 1.2rem;
 }
 
 /*----- INTRODUÇÃO -----*/
@@ -70,6 +71,34 @@
 .intro p {
     grid-column: 1 / 6;
     text-align: center;
+}
+
+/*----- IMG FUNDO -----*/
+
+#img-fundo {
+    grid-column: 1 / 6;
+    background-image: url('https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1665&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-fundo {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .5);
+    padding: 5rem;
+}
+
+.img-fundo h1 {
+    grid-column: 1 / 6;
+    color: $main_font_color;
 }
 
 /*----- INSTRUCT -----*/
@@ -118,6 +147,7 @@
     color: $main_font_color;
     border: 1px solid $main_color;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .5);
 }
 
 .p-2 {
@@ -130,13 +160,10 @@
     width: 100%;
     padding: 1.5rem;
     color: $sec_font_color;
-    border: 1px solid $main_color;
+    border: 1px solid $sec_color;
     border-radius: 10px;
     transition: all .3s ease-out;
-}
-
-.p-2-1:hover {
-    border: 1px solid $sec_color;
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .5);
 }
 
 .p-3 {
@@ -151,6 +178,7 @@
     color: $main_font_color;
     border: 1px solid $main_color;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .5);
 }
 
 .p-1-2, .p-2-2, .p-3-2 {

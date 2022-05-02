@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 .modal-container {
   height: 100vh;
   width: 100%;
@@ -107,7 +108,7 @@
 .modal a:hover {
   color: #5211A8; }
 
-#intro, #instruct, #faq {
+#intro, #img-fundo, #instruct, #faq {
   grid-column: 1 / 6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -132,18 +133,17 @@
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   color: #fff;
   margin-left: 5rem;
   padding: 1rem 3rem;
   text-align: center;
   border-radius: 10px;
-  font-weight: bolder; }
+  font-weight: bolder;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px); }
 
-.main-title::before {
-  -webkit-filter: blur(10px);
-          filter: blur(10px); }
+.main-title p {
+  font-size: 1.2rem; }
 
 /*----- INTRODUÇÃO -----*/
 #intro {
@@ -178,6 +178,36 @@
 .intro p {
   grid-column: 1 / 6;
   text-align: center; }
+
+/*----- IMG FUNDO -----*/
+#img-fundo {
+  grid-column: 1 / 6;
+  background-image: url("https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1665&q=80");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.img-fundo {
+  grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 5rem; }
+
+.img-fundo h1 {
+  grid-column: 1 / 6;
+  color: #fff; }
 
 /*----- INSTRUCT -----*/
 #instruct {
@@ -216,7 +246,9 @@
   background: #333;
   color: #fff;
   border: 1px solid #333;
-  border-radius: 10px; }
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); }
 
 .p-2 {
   grid-column: 3 / 4;
@@ -226,13 +258,12 @@
   width: 100%;
   padding: 1.5rem;
   color: #333;
-  border: 1px solid #333;
+  border: 1px solid #5211A8;
   border-radius: 10px;
   -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out; }
-
-.p-2-1:hover {
-  border: 1px solid #5211A8; }
+  transition: all .3s ease-out;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); }
 
 .p-3 {
   grid-column: 5 / 6;
@@ -244,7 +275,9 @@
   background: #333;
   color: #fff;
   border: 1px solid #333;
-  border-radius: 10px; }
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); }
 
 .p-1-2, .p-2-2, .p-3-2 {
   width: 100%;
@@ -667,12 +700,16 @@
 html, body {
   margin: 0; }
 
+body::-webkit-scrollbar {
+  display: none; }
+
 .main-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 
 h1 {
-  font-size: 5rem; }
+  font-size: 5rem;
+  font-family: 'Goldman', cursive; }
 
 h2 {
   text-align: center;
