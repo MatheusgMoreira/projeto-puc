@@ -16,6 +16,7 @@
 
 html, body {
     margin: 0;
+    background: rgb(250, 250, 250);
 }
 
     
@@ -119,32 +120,37 @@ footer {
     grid-column: 1 / 6;
     background: $grad_color_1;
     color: $main_font_color;
-    padding: 1.5rem;
-    margin-top: 3rem;
+    padding: 1.5rem 1.5rem .5rem 1.5rem;
+
 }
 
-.rodape{
+.rodape-p-1, .rodape-p-2 { 
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.rodape h3 {
-    font-size: 1.5rem;
+.rodape-p-1 h3, .rodape-p-2 h3 {
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-.rodape ul li {
+.rodape-p-1 ul li, .rodape-p-2 ul li {
     display: inline-block;
     list-style: none;
     font-weight: bold;
 }
 
-.rodape ul li a{
+.rodape-p-1 ul li a {
     text-decoration: none;
-    color: $sec_color;
+    color: $third_font_color;
     padding-right: .5rem;
+}
+
+.rodape-p-1 img {
+    width: 32px;
+    margin-left: .3rem;
 }
 
 .info-cont {
@@ -156,9 +162,25 @@ footer {
     text-align: right;
 }
 
-.rodape img {
-    width: 32px;
+.menu-rodap {
+    grid-column: 1 / 6;
+    padding: 2.5rem;
+    text-align: center;
 }
+
+.menu-rodap ul li a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $main_font_color;
+    padding: .5rem;
+}
+
+.menu-rodap li:hover, .menu-rodap a:hover {
+    text-decoration: underline;
+    transform: translateY(-10px);
+  }
 
 /*----- TABELA -----*/
 

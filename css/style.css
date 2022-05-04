@@ -698,7 +698,8 @@
   font-family: 'Montserrat', sans-serif; }
 
 html, body {
-  margin: 0; }
+  margin: 0;
+  background: #fafafa; }
 
 body::-webkit-scrollbar {
   display: none; }
@@ -783,28 +784,31 @@ footer {
   grid-column: 1 / 6;
   background: #333;
   color: #fff;
-  padding: 1.5rem;
-  margin-top: 3rem; }
+  padding: 1.5rem 1.5rem .5rem 1.5rem; }
 
-.rodape {
+.rodape-p-1, .rodape-p-2 {
   grid-column: 1 / 6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  font-size: 1.2rem; }
+  font-size: 1rem; }
 
-.rodape h3 {
-  font-size: 1.5rem;
+.rodape-p-1 h3, .rodape-p-2 h3 {
+  font-size: 1.2rem;
   font-weight: bold; }
 
-.rodape ul li {
+.rodape-p-1 ul li, .rodape-p-2 ul li {
   display: inline-block;
   list-style: none;
   font-weight: bold; }
 
-.rodape ul li a {
+.rodape-p-1 ul li a {
   text-decoration: none;
   color: #5211A8;
   padding-right: .5rem; }
+
+.rodape-p-1 img {
+  width: 32px;
+  margin-left: .3rem; }
 
 .info-cont {
   grid-column: 1 / 3; }
@@ -813,8 +817,23 @@ footer {
   grid-column: 4 / 6;
   text-align: right; }
 
-.rodape img {
-  width: 32px; }
+.menu-rodap {
+  grid-column: 1 / 6;
+  padding: 2.5rem;
+  text-align: center; }
+
+.menu-rodap ul li a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: .5rem; }
+
+.menu-rodap li:hover, .menu-rodap a:hover {
+  text-decoration: underline;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px); }
 
 /*----- TABELA -----*/
 .info-user, .financeiro-user, .uso-user {

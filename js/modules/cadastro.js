@@ -184,20 +184,20 @@ function carregaListaPessoas(pessoas = Array(), filtro = false) {
     linha.insertCell(5).innerHTML = d.vaga
 
     //Botão de excluír
-  let btn = document.createElement('button')
-  btn.innerHTML = '<i>Excluir</i>'
-  btn.id = `id_pessoa_${d.id}`
-  btn.onclick = function(){
+    let btn = document.createElement('button')
+    btn.innerHTML = '<i>Excluir</i>'
+    btn.id = `id_pessoa_${d.id}`
+    btn.onclick = function(){
           
     let id = this.id.replace('id_pessoa_','')
     
-          //Remove a despesa
+    //Remove a despesa
     bd.remover(id)
     window.location.reload()
   }
 
-  linha.insertCell(6).append(btn)
-  console.log(d)
+    linha.insertCell(6).append(btn)
+    console.log(d)
   })
 }
 
