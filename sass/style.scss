@@ -7,18 +7,17 @@
 @import 'agendamento';
 @import 'financeiro';
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 /*----- GERAL -----*/
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 html, body {
     margin: 0;
-    background: rgb(250, 250, 250);
 }
-
     
 body::-webkit-scrollbar {
     display: none;

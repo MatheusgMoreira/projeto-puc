@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 .modal-container {
   height: 100vh;
   width: 100%;
@@ -107,6 +108,12 @@
 
 .modal a:hover {
   color: #5211A8; }
+
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #intro, #img-fundo, #instruct, #faq {
   grid-column: 1 / 6;
@@ -360,6 +367,12 @@
   to {
     max-height: 200px;
     opacity: 1; } }
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 /*----- ADMINISTRADOR -----*/
 .adm {
   grid-column: 1 / 6;
@@ -461,6 +474,12 @@
   grid-column: 3 / 4;
   padding: .5rem; }
 
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 /*----- USUÁRIO -----*/
 .user {
   grid-column: 1 / 6;
@@ -479,6 +498,12 @@
 .user-img {
   width: 30%;
   margin-bottom: 2rem; }
+
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*----- CADASTRO -----*/
 .cadastro {
@@ -571,6 +596,12 @@
 .c-2 {
   grid-column: 3 / 4;
   padding: .5rem; }
+
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*----- AGENDAMENTO -----*/
 .agd {
@@ -677,6 +708,12 @@
   width: 40%;
   margin-bottom: 2rem; }
 
+body {
+  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 /*----- FINANCEIRO -----*/
 .financeiro {
   grid-column: 1 / 6;
@@ -695,11 +732,10 @@
 
 /*----- GERAL -----*/
 * {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Roboto Mono', monospace; }
 
 html, body {
-  margin: 0;
-  background: #fafafa; }
+  margin: 0; }
 
 body::-webkit-scrollbar {
   display: none; }
