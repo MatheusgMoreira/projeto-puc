@@ -7,11 +7,10 @@ body {
     background-size: cover;
 }
 
-#intro, #img-fundo, #instruct, #faq {
+#intro, #img-fundo, #instruct, #feedback, #faq {
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-top: 3rem;
 }
 
 .home-img {
@@ -46,10 +45,11 @@ body {
 
 #intro {
     padding: 1rem;
+    margin: 0 10rem;
 }
 
 .intro {
-    grid-column: 2 / 5;
+    grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -89,6 +89,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 5rem 0;
 }
 
 .img-fundo {
@@ -112,10 +113,11 @@ body {
 
 #instruct {
     padding: 1rem;
+    margin: 0 10rem;
 }
 
 .instruct {
-    grid-column: 2 / 5;
+    grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -138,18 +140,19 @@ body {
 .instruct img {
     grid-column: 1 / 6;
     width: 100%;
+    display: block;
     margin: 0 auto;
     margin-top: 5rem;
 }
 
 .p-1 {
-    grid-column: 1 / 2;
+    grid-column: 1;
     width: 100%;
 }
 
 .p-1-1 {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     background: $grad_color_2;
     color: $main_font_color;
     border: 1px solid $main_color;
@@ -194,6 +197,55 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+}
+
+/*----- FEEDBACK -----*/
+
+#feedback {
+    padding: 1rem;
+    margin: 0 10rem;
+}
+
+.feedback {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.feedback h2 {
+    grid-column: 1 / 6;
+    text-align: center;
+}
+
+.feedback h3 {
+    color: $third_font_color;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.feedback p {
+    text-align: center;
+}
+
+.feedback img {
+    grid-column: 1 / 6;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.feedbck-1 {
+    grid-column: 1 / 2;
+}
+
+.feedbck-2 {
+    grid-column: 3 / 4;
+}
+
+.feedbck-3 {
+    grid-column: 5 / 6;
 }
 
 
