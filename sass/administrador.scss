@@ -22,8 +22,11 @@ body {
 }
 
 .tabela-adm {
-    text-align: center;
-    margin: 0 auto;
+    grid-column: 1 / 6;
+}
+
+.tabela-adm table {
+    grid-column: 1 / 6;
 }
 
 .form-adm {
@@ -102,6 +105,7 @@ body {
     cursor: pointer;
     transition: all .3s ease-out;
 }
+
 .form-adm button:hover {
     background: $sec_color;
     color: $main_font_color;

@@ -427,8 +427,10 @@ body {
   margin: 0 auto; }
 
 .tabela-adm {
-  text-align: center;
-  margin: 0 auto; }
+  grid-column: 1 / 6; }
+
+.tabela-adm table {
+  grid-column: 1 / 6; }
 
 .form-adm {
   grid-column: 1 / 6;

@@ -20,25 +20,10 @@ class Pessoa {
 }
 
 class Bd {
-  //Criação da id do Banco de dados no localStorage
-  constructor() {
-    let id = localStorage.getItem("id");
-
-    if (id === null) {
-      localStorage.setItem("id", 0);
-    }
-  }
-
-  getProximoId() {
-    let proximoId = localStorage.getItem("id");
-    return parseInt(proximoId) + 1;
-  }
-
   gravar(d) {
-    let id = this.getProximoId();
-    let listaPessoas = JSON.parse(localStorage.getItem("lista-pessoas") || "[]");
+    let listaP = JSON.parse(localStorage.getItem("lista-pessoas") || "[]");
 
-    listaPessoas.push({
+    listaP.push({
       nome: d.nome,
       cpf: d.cpf,
       carro: d.carro,
@@ -47,14 +32,14 @@ class Bd {
       vaga: d.vaga,
     });
 
-    localStorage.setItem("lista-pessoas", JSON.stringify(listaPessoas));
+    localStorage.setItem("lista-pessoas", JSON.stringify(listaP));
   }
 
   recuperarTodosRegistros() {
     //Array de pessoas
-    let pessoas = Array(localStorage.getItem("lista-pessoas"))
+    let pessoas = Array(localStorage.getItem("lista-pessoas"));
 
-    let id = localStorage.getItem("id");
+    let id = pessoas.length;
 
     //Recupera todas as pessoas cadastradas em LocalStorage
     for (let i = 1; i <= id; i++) {
@@ -70,55 +55,6 @@ class Bd {
     }
 
     return pessoas;
-  }
-
-  pesquisar(pessoa) {
-    let pessoasFiltradas = Array();
-    pessoasFiltradas = this.recuperarTodosRegistros();
-
-    //Filtros do Array
-
-    //nome
-    if (pessoa.nome != "") {
-      pessoasFiltradas = pessoasFiltradas.filter((d) => d.nome == pessoa.nome);
-    }
-
-    //Mês
-    if (pessoa.cpf != "") {
-      pessoasFiltradas = pessoasFiltradas.filter((d) => d.cpf == pessoa.cpf);
-    }
-
-    //carro
-    if (pessoa.carro != "") {
-      pessoasFiltradas = pessoasFiltradas.filter(
-        (d) => d.carro == pessoa.carro
-      );
-    }
-
-    //email
-    if (pessoa.email != "") {
-      pessoasFiltradas = pessoasFiltradas.filter(
-        (d) => d.email == pessoa.email
-      );
-    }
-
-    //Descrição
-    if (pessoa.telefone != "") {
-      pessoasFiltradas = pessoasFiltradas.filter(
-        (d) => d.telefone == pessoa.telefone
-      );
-    }
-
-    //vaga
-    if (pessoa.vaga != "") {
-      pessoasFiltradas = pessoasFiltradas.filter((d) => d.vaga == pessoa.vaga);
-    }
-
-    return pessoasFiltradas;
-  }
-
-  remover(id) {
-    localStorage.removeItem(id);
   }
 }
 
@@ -163,8 +99,8 @@ function cadastrarPessoa() {
   }
 }
 
-function carregaListaPessoas(pessoas = Array(), filtro = false) {
-  if (pessoas.length == 0 && filtro == false) {
+function carregaListaPessoas(pessoas = Array()) {
+  if (pessoas.length == 0) {
     pessoas = bd.recuperarTodosRegistros();
   }
 
@@ -175,44 +111,18 @@ function carregaListaPessoas(pessoas = Array(), filtro = false) {
   //Percorre o array pessoa, listando cada despesa de forma dinâmica
   pessoas.forEach(function (d) {
     //Cria a linha <tr>
-    var linha = listaPessoas.insertRow();
+    let listaP = JSON.parse(localStorage.getItem("lista-pessoas") || "[]");
+    let tLista = listaP.length;
 
     //Cria as colunas <td>
-    linha.insertCell(0).innerHTML = d.nome;
-    linha.insertCell(1).innerHTML = d.cpf;
-    linha.insertCell(2).innerHTML = d.carro;
-    linha.insertCell(3).innerHTML = d.email;
-    linha.insertCell(4).innerHTML = d.telefone;
-    linha.insertCell(5).innerHTML = d.vaga;
-
-    //Botão de excluír
-    let btn = document.createElement("button");
-    btn.innerHTML = "<i>Excluir</i>";
-    btn.id = `id_pessoa_${d.id}`;
-    btn.onclick = function () {
-      let id = this.id.replace("id_pessoa_", "");
-
-      //Remove a despesa
-      bd.remover(id);
-      window.location.reload();
-    };
-
-    linha.insertCell(6).append(btn);
-    console.log(d);
+    for (let i = 0; i < tLista; i++) {
+      var linha = listaPessoas.insertRow();
+      linha.insertCell(0).innerHTML = listaP[i].nome;
+      linha.insertCell(1).innerHTML = listaP[i].cpf;
+      linha.insertCell(2).innerHTML = listaP[i].carro;
+      linha.insertCell(3).innerHTML = listaP[i].email;
+      linha.insertCell(4).innerHTML = listaP[i].telefone;
+      linha.insertCell(5).innerHTML = listaP[i].vaga;
+    }
   });
-}
-
-function pesquisarPessoa() {
-  let nome = document.getElementById("nome").value;
-  let cpf = document.getElementById("cpf").value;
-  let carro = document.getElementById("carro").value;
-  let email = document.getElementById("email").value;
-  let telefone = document.getElementById("telefone").value;
-  let vaga = document.getElementById("vaga").value;
-
-  let pessoa = new Pessoa(nome, cpf, carro, email, telefone, vaga);
-
-  let pessoas = bd.pesquisar(pessoa);
-
-  this.carregaListaPessoas(pessoas, true);
 }
