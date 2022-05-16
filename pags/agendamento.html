@@ -23,9 +23,10 @@
     <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/2511/premium/2511629.png?token=exp=1651456283~hmac=04a355ff6e72f7299cce992bc5ddaa6a" type="image/x-icon">
 
     <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/agendamento.js"></script>
 </head>
 
-<body>
+<body onload="carregaListaAgendamentos()">
     <div class="main-container">
         <header>
             <div class="menu">
@@ -60,19 +61,48 @@
                                     <input type="number" name="cpfAgd" id="cpfAgd" required>
                                     <label for="cpfAgd">CPF:</label>
                                 </div>
+                                <div class="label-float">
+                                    <input type="text" name="carroAgd" id="carroAgd" required>
+                                    <label for="carroAgd">Carro:</label>
+                                </div>
                             </div>
                             <div class="c-2">
                                 <div class="label-float">
-                                    <input type="text" name="dia" id="dia" required>
-                                    <label for="dia">Dia:</label>
+                                    <input type="date" name="data" id="data" required>
+                                    <label for="data">Data:</label>
                                 </div>
                                 <div class="label-float">
-                                    <input type="text" name="hora" id="hora" required>
+                                    <input type="time" name="hora" id="hora" required>
                                     <label for="hora">Hora:</label>
                                 </div>
+                                <div class="label-float">
+                                    <input type="tel" name="telefoneAgd" id="telefoneAgd" required>
+                                    <label for="telefoneAgd">Telefone:</label>
+                                </div>
                             </div>
-                            <button type="button" >Agendar</button>
+                            <button type="button" onclick="cadastrarAgendamento()">Agendar</button>
                         </form>
+                    </div>
+                </div>
+
+                <div class="tabela-adm">
+                    <div class="tabela">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Carro</th>
+                                    <th>Data</th>
+                                    <th>Hora</th>
+                                    <th>Telefone</th>
+                                </tr>
+                            </thead>
+        
+                            <tbody id="listaAgendamento">
+                                <td></td>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -117,7 +147,7 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text" for="email" name="email" id="email">
+                <input type="text" for="email" name="email">
                 <label for="senha">Senha</label>
                 <input type="password" for="senha" name="senha" id="senha">
                 <button href="adm.html">Entrar</button>

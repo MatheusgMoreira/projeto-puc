@@ -56,6 +56,12 @@ class Bd {
 
     return pessoas;
   }
+
+  remover(id){
+    let pessoasR = Array(localStorage.getItem("lista-pessoas"))
+		
+    pessoasR.shift(id);
+	}
 }
 
 let bd = new Bd();
@@ -123,6 +129,17 @@ function carregaListaPessoas(pessoas = Array()) {
       linha.insertCell(3).innerHTML = listaP[i].email;
       linha.insertCell(4).innerHTML = listaP[i].telefone;
       linha.insertCell(5).innerHTML = listaP[i].vaga;
+
+      let btn = document.createElement("button");
+      btn.className = "btn btn-danger";
+      btn.innerHTML = '<i class="fa fa-times"  ></i>';
+      btn.onclick = function () {
+        let id = i;
+
+        bd.remover(id);
+        window.location.reload();
+      };
+      linha.insertCell(6).append(btn);
     }
   });
 }
