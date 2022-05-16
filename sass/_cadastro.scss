@@ -1,42 +1,24 @@
 @import 'vars';
 
-body {
-    background-image: url('https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/*----- CADASTRO -----*/
 
-/*----- AGENDAMENTO -----*/
-
-.agd {
+.cadastro {
     grid-column: 1 / 6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.geral-agd {
-    grid-column: 1 / 6;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.tabela-agd {
-    text-align: center;
-    margin: 0 auto;
-}
-
-.form-agd {
+.form-cadastro {
     grid-column: 1 / 6;
     margin: 0 auto;
-    margin: 8rem 8rem 2rem 8rem;
+    margin: 8rem;
 }
 
-.form-agd h2 {
+.form-cadastro h2 {
     grid-column: 1 / 6;
 }
 
-.form-agd form {
+.form-cadastro form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: min-content;
@@ -88,7 +70,7 @@ body {
   color: $third_font_color;
 }
 
-.form-agd button {
+.form-cadastro button {
     grid-column: 1 / 6;
     display: block;
     margin: 0 auto;
@@ -102,7 +84,7 @@ body {
     cursor: pointer;
     transition: all .3s ease-out;
 }
-.form-agd button:hover {
+.form-cadastro button:hover {
     background: $sec_color;
     color: $main_font_color;
 }
@@ -114,9 +96,4 @@ body {
 .c-2 {
     grid-column:  3 / 4;
     padding: .5rem; 
-}
-
-.agd-img {
-    width: 40%;
-    margin-bottom: 2rem;
 }
