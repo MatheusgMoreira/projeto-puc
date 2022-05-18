@@ -21,7 +21,9 @@ class Agendamento {
 
 class Bd {
   gravar(d) {
-    let listaAgd = JSON.parse(localStorage.getItem("lista-agendamento") || "[]");
+    let listaAgd = JSON.parse(
+      localStorage.getItem("lista-agendamento") || "[]"
+    );
 
     listaAgd.push({
       nome: d.nome,
@@ -56,6 +58,15 @@ class Bd {
 
     return agendamentos;
   }
+  remover(id) {
+    let listaAgd = JSON.parse(
+      localStorage.getItem("lista-agendamento") || "[]"
+    );
+
+    listaAgd.splice(id, 1);
+
+    localStorage.setItem("lista-agendamento", JSON.stringify(listaAgd));
+  }
 }
 
 let bd = new Bd();
@@ -68,7 +79,7 @@ function cadastrarAgendamento() {
   let telefone = document.getElementById("telefoneAgd");
   let hora = document.getElementById("hora");
 
-  let agendamento = new Agendamento (
+  let agendamento = new Agendamento(
     nome.value,
     cpf.value,
     carro.value,
@@ -111,7 +122,9 @@ function carregaListaAgendamentos(agendamentos = Array()) {
   //Percorre o array agendamento, listando cada agendamento de forma dinâmica
   agendamentos.forEach(function (d) {
     //Cria a linha <tr>
-    let listaAgd = JSON.parse(localStorage.getItem("lista-agendamento") || "[]");
+    let listaAgd = JSON.parse(
+      localStorage.getItem("lista-agendamento") || "[]"
+    );
     let tLista = listaAgd.length;
 
     //Cria as colunas <td>
@@ -131,6 +144,7 @@ function carregaListaAgendamentos(agendamentos = Array()) {
         let id = i;
 
         bd.remover(id);
+
         window.location.reload();
       };
       linha.insertCell(6).append(btn);
