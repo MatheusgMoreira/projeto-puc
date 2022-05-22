@@ -58,6 +58,7 @@ class Bd {
 
     return agendamentos;
   }
+  
   remover(id) {
     let listaAgd = JSON.parse(
       localStorage.getItem("lista-agendamento") || "[]"

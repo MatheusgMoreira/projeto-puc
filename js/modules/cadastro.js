@@ -57,11 +57,15 @@ class Bd {
     return pessoas;
   }
 
-  remover(id){
-    let pessoasR = Array(localStorage.getItem("lista-pessoas"))
-		
-    pessoasR.shift(id);
-	}
+  remover(id) {
+    let listaAgd = JSON.parse(
+      localStorage.getItem("lista-pessoas") || "[]"
+    );
+
+    listaAgd.splice(id, 1);
+
+    localStorage.setItem("lista-pessoas", JSON.stringify(listaAgd));
+  }
 }
 
 let bd = new Bd();
@@ -137,6 +141,7 @@ function carregaListaPessoas(pessoas = Array()) {
         let id = i;
 
         bd.remover(id);
+
         window.location.reload();
       };
       linha.insertCell(6).append(btn);
