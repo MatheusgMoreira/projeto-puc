@@ -92,7 +92,7 @@ function cadastrarPessoa() {
 
     bd.gravar(pessoa);
 
-    alert("Cadastro realizado com sucesso!!!");
+    window.location.reload();
 
     //Limpa os campos ao enviar as informações
     nome.value = "";

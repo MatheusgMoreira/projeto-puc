@@ -20,12 +20,15 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Icon -->
-    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/2511/premium/2511629.png?token=exp=1651456283~hmac=04a355ff6e72f7299cce992bc5ddaa6a" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://cdn-icons.flaticon.com/png/512/2511/premium/2511629.png?token=exp=1651456283~hmac=04a355ff6e72f7299cce992bc5ddaa6a"
+        type="image/x-icon">
 
     <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/financeiro.js"></script>
 </head>
 
-<body>
+<body onload="carregaListaValores()">
     <div class="main-container">
         <header>
             <div class="menu">
@@ -48,33 +51,62 @@
             <section class="financeiro">
                 <div class="financeiro-tabela">
                     <div class="tabela">
-                        <img class="financeiro-img" src="../media/undraw_savings_re_eq4w.svg" alt="">
-                        <form action="" class="form-tabela">
-                            <input type="text" placeholder="Pesquisar" class="tabela-input">
-                            <button class="tabela-button">Buscar</button>
-                        </form>
-                        <table>
-                            <h2 data-mes></h2>
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Débito(s)</th>
-                                    <th>Próximo pagamento</th>
-                                    <th>Valor</th>
-                                </tr>
-                            </thead>
+                        <div class="form-agd">
+                            <img class="financeiro-img" src="../media/undraw_savings_re_eq4w.svg" alt="">
+                            <h2>Inserir valor do mês</h2>
+                            <form action="">
+                                <div class="c-1">
+                                    <div class="label-float">
+                                        <input type="text" name="nomeFin" id="nomeFin" required>
+                                        <label for="nomeFin">Nome:</label>
+                                    </div>
+                                    <div class="label-float">
+                                        <input type="number" name="cpfFin" id="cpfFin" required>
+                                        <label for="cpfFin">CPF:</label>
+                                    </div>
+                                    <div class="label-float">
+                                        <input type="text" name="apartamentoFin" id="apartamentoFin" required>
+                                        <label for="apartamentoFin">Apartamento:</label>
+                                    </div>
+                                </div>
+                                <div class="c-2">
+                                    <div class="label-float">
+                                        <input type="number" name="valorFin" id="valorFin" required>
+                                        <label for="valorFin">Valor (R$):</label>
+                                    </div>
+                                    <div class="label-float">
+                                        <input type="text" name="telefoneFin" id="telefoneFin" required>
+                                        <label for="telefoneFin">Telefone:</label>
+                                    </div>
+                                    <div class="label-float">
+                                        <input type="tel" name="emailFin" id="emailFin" required>
+                                        <label for="emailFin">E-mail:</label>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="cadastrarValor()">Inserir</button>
+                            </form>
+                        </div>
 
-                            <tbody>
-                                <tr>
-                                    <td>José da Silva</td>
-                                    <td>123.456.789-10</td>
-                                    <td>Não</td>
-                                    <td>03/05/2022</td>
-                                    <td>R$ 102,36</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="tabela-adm">
+                            <div class="tabela">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>Apartamento</th>
+                                            <th>Valor (R$)</th>
+                                            <th>Telefone</th>
+                                            <th>E-mail</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="listaVlr">
+                                        <td></td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -118,7 +150,7 @@
             <button data-modal="fechar" class="fechar">X</button>
             <form action="">
                 <label for="email">Email</label>
-                <input type="text" for="email" name="email" id="email">
+                <input type="text" for="email" name="email">
                 <label for="senha">Senha</label>
                 <input type="password" for="senha" name="senha" id="senha">
                 <button href="adm.html">Entrar</button>

@@ -58,7 +58,7 @@ class Bd {
 
     return agendamentos;
   }
-  
+
   remover(id) {
     let listaAgd = JSON.parse(
       localStorage.getItem("lista-agendamento") || "[]"
@@ -94,7 +94,7 @@ function cadastrarAgendamento() {
 
     bd.gravar(agendamento);
 
-    alert("Cadastro realizado com sucesso!!!");
+    window.location.reload();
 
     //Limpa os campos ao enviar as informações
     nome.value = "";

@@ -51,60 +51,25 @@
         <article>
             <section class="adm">
                 <div class="geral-adm">
-                    <div class="form-adm">
-                        <h2>Pesquisar Morador</h2>
-                        <form action="">
-                            <div class="c-1">
-                                <div class="label-float">
-                                    <input type="text" name="nome" id="nome" required>
-                                    <label for="nome">Nome:</label>
-                                </div>
-                                <div class="label-float">
-                                    <input type="number" name="cpf" id="cpf" required>
-                                    <label for="cpf">CPF:</label>
-                                </div>
-                                <div class="label-float">
-                                    <input type="text" name="carro" id="carro" required>
-                                    <label for="carro">Modelo de carro:</label>
-                                </div>
-                            </div>
-                            <div class="c-2">
-                                <div class="label-float">
-                                    <input type="email" name="email" id="email" required>
-                                    <label for="email">E-mail:</label>
-                                </div>
-                                <div class="label-float">
-                                    <input type="tel" name="telefone" id="telefone" required>
-                                    <label for="telefone">Telefone:</label>
-                                </div>
-                                <div class="label-float">
-                                    <input type="number" name="vaga" id="vaga" required>
-                                    <label for="vaga">Nº da vaga:</label>
-                                </div>
-                            </div>
-                            <button type="button" onclick="pesquisarPessoa()">Pesquisar</button>
-                        </form>
-                    </div>
-                </div>
+                    <div class="tabela-adm">
+                        <div class="tabela">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>Carro</th>
+                                        <th>E-mail</th>
+                                        <th>Telefone</th>
+                                        <th>Vaga</th>
+                                    </tr>
+                                </thead>
 
-                <div class="tabela-adm">
-                    <div class="tabela">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Carro</th>
-                                    <th>E-mail</th>
-                                    <th>Telefone</th>
-                                    <th>Vaga</th>
-                                </tr>
-                            </thead>
-        
-                            <tbody id="listaPessoas">
-                                <td></td>
-                            </tbody>
-                        </table>
+                                <tbody id="listaPessoas">
+                                    <td></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
