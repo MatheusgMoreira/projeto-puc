@@ -20,15 +20,6 @@ body {
   margin: 0;
 }
 
-body {
-  background-image: url("https://img.freepik.com/fotos-gratis/texturas-de-parede-cinza-para-plano-de-fundo_74190-4389.jpg?t=st=1651940024~exp=1651940624~hmac=b68a975ed5d8b105413d0e25091bf29c4983992095f96d35f2930a794386c4b5&w=1380");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 
 h1 {
   font-size: 5rem;
