@@ -1,22 +1,21 @@
+let adm = ["adm", "adm"];
+localStorage.setItem("login-adm", JSON.stringify(adm));
+
 function login() {
   let user = document.querySelector("#user").value;
   let password = document.querySelector("#password").value;
   const conta = Array(localStorage.getItem("lista-pessoas"));
+  const loginAdm = Array(localStorage.getItem("login-adm"));
 
-  conta.forEach((usuario, index, array) => {
-    if (array[index].includes(user) && array[index].includes(password)) {
-      validacao = true;
+  loginAdm.forEach((usuario) => {
+    if (usuario.includes(user) && usuario.includes(password)) {
+      window.open("pags/adm.html");
     }
-
-    return validacao;
   });
 
-  if (validacao) {
-    window.open("pags/adm.html");
-  } else {
-    console.log("Você não possui uma conta");
-  }
+  conta.forEach((usuario) => {
+    if (usuario.includes(user) && usuario.includes(password)) {
+      window.open("pags/usuario.html");
+    }
+  });
 }
-
-const conta = Array(localStorage.getItem("lista-pessoas"));
-console.log(typeof(conta))

@@ -58,9 +58,7 @@ class Bd {
   }
 
   remover(id) {
-    let listaAgd = JSON.parse(
-      localStorage.getItem("lista-pessoas") || "[]"
-    );
+    let listaAgd = JSON.parse(localStorage.getItem("lista-pessoas") || "[]");
 
     listaAgd.splice(id, 1);
 
