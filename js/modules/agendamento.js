@@ -138,17 +138,21 @@ function carregaListaAgendamentos(agendamentos = Array()) {
       linha.insertCell(4).innerHTML = listaAgd[i].hora;
       linha.insertCell(5).innerHTML = listaAgd[i].telefone;
 
-      let btn = document.createElement("button");
-      btn.className = "btn btn-danger";
-      btn.innerHTML = '<i class="fa fa-times"  ></i>';
-      btn.onclick = function () {
-        let id = i;
+      if (window.location.href == "http://127.0.0.1:5501/pags/agendamentoAdm.html") {
+        let btn = document.createElement("button");
+        btn.className = "btn btn-danger";
+        btn.innerHTML = '<i class="fa fa-times"  ></i>';
+        btn.onclick = function () {
+          let id = i;
 
-        bd.remover(id);
+          bd.remover(id);
 
-        window.location.reload();
-      };
-      linha.insertCell(6).append(btn);
+          window.location.reload();
+        };
+        linha.insertCell(6).append(btn);
+      }
     }
   });
 }
+
+console.log(window.location.href)

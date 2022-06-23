@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema | Administrador</title>
+    <title>Sistema | Agendamentos</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
@@ -24,12 +24,11 @@
         href="https://cdn-icons.flaticon.com/png/512/2511/premium/2511629.png?token=exp=1651456283~hmac=04a355ff6e72f7299cce992bc5ddaa6a"
         type="image/x-icon">
 
-
     <script>document.documentElement.className += ' js';</script>
-    <script src="../js/modules/cadastro.js"></script>
+    <script src="../js/modules/agendamento.js"></script>
 </head>
 
-<body onload="carregaListaPessoas()">
+<body onload="carregaListaAgendamentos()">
     <div class="main-container">
         <header>
             <div class="menu">
@@ -43,8 +42,13 @@
         </header>
 
         <article>
-            <section class="adm">
-                <div class="geral-adm">
+            <section class="agd">
+                <div class="geral-agd">
+                    <div class="form-agd">
+                        <img class="agd-img" src="../media/undraw_booking_re_gw4j.svg" alt="">
+                        <h2>Agendamentos</h2>
+                    </div>
+
                     <div class="tabela-adm">
                         <div class="tabela">
                             <table>
@@ -53,13 +57,13 @@
                                         <th>Nome</th>
                                         <th>CPF</th>
                                         <th>Carro</th>
-                                        <th>E-mail</th>
+                                        <th>Data</th>
+                                        <th>Hora</th>
                                         <th>Telefone</th>
-                                        <th>Vaga</th>
                                     </tr>
                                 </thead>
 
-                                <tbody id="listaPessoas">
+                                <tbody id="listaAgendamento">
                                     <td></td>
                                 </tbody>
                             </table>
@@ -67,8 +71,8 @@
                     </div>
                 </div>
             </section>
-        </article>
 
+        </article>
 
         <footer>
             <div class="rodape-p-1">
@@ -92,7 +96,7 @@
             <div class="rodape-p-2">
                 <div class="menu-rodap">
                     <ul>
-                        <li><a href="adm.html">Voltar ao início</a></li>
+                        <li><a href="agendamento.html">Voltar ao início</a></li>
                     </ul>
                 </div>
             </div>
