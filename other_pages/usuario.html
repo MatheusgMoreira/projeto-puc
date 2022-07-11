@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema | Usuário</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../media/shortcuticon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/cadastro.js"></script>
+</head>
+
+<body onload="carregaListaPessoas()">
+
+    <header id="header">
+        <nav id="nav" data-menu="suave">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false"><span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./usuario.html">Usuário</a></li>
+                <li><a href="./agendamento.html">Agendamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="user">
+            <img src="../media/avatar-homem.svg" alt="">
+            <h2>José da Silva</h2>
+
+            <div class="tabela-bg">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apartamento</th>
+                                <th>CPF</th>
+                                <th>Carro</th>
+                                <th>Telefone</th>
+                                <th>E-mail</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <td>01</td>
+                            <td>12945835657</td>
+                            <td>Renault Zoe</td>
+                            <td>31998339846</td>
+                            <td>josesilva@gmail.com</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3>Próxima Utilização</h3>
+
+            <div class="tabela-bg">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Hora</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <td>27/08/2022</td>
+                            <td>18:00 - 19:00</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <a href="./agendamento.html">Agendar</a>
+
+            <h3>Suas Utilizações no Mês</h3>
+            <div class="tabela-bg">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nº de Usos</th>
+                                <th>Tempo de Uso</th>
+                                <th>Último Uso</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <td>10</td>
+                            <td>15h</td>
+                            <td>17/07/2022</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3>Histórico de Pagamentos</h3>
+            <div class="tabela-bg">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>01/07/2022</td>
+                                <td>R$384,56</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container footer-bg">
+        <div class="footer-conteudo">
+            <p><a href="https://github.com/NakamuraNP" target="_blank">Matheus Moreira &copy; - 2022</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

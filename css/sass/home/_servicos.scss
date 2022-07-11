@@ -1,0 +1,45 @@
+.servicos-conteudo {
+  display: flex;
+  justify-content: center;
+  background: $cor-terciaria;
+  padding-top: 5em;
+
+  .servico {
+    flex: 1;
+    text-align: center;
+    align-self: flex-end;
+    align-items: center;
+    margin-bottom: -5px;
+
+    img {
+      max-width: 100%;
+    }
+
+    h3 {
+      @include titulo(1);
+    }
+
+    p {
+      @include paragrafo(1);
+      margin: 2em;
+    }
+
+    @include d(sm) {
+      h3 {
+        margin-top: 1em;
+      }
+    }
+
+    @include d(md) {
+    }
+  }
+
+  @include d(sm) {
+    flex-direction: column;
+    padding-top: 2em;
+  }
+
+  @include d(md) {
+    padding-top: 2em;
+  }
+}

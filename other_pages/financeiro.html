@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema | Financeiro</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../media/shortcuticon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/financeiro.js"></script>
+</head>
+
+<body onload="carregaListaValores()">
+    <header id="header">
+        <nav id="nav" data-menu="suave">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false"><span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./adm.html">Administrador</a></li>
+                <li><a href="./agendamentoAdm.html">Agendamentos</a></li>
+                <li><a href="./financeiro.html">Financeiro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="formulario-geral">
+            <form action="">
+                <h2>Financeiro</h2>
+                <div class="c-1">
+                    <div>
+                        <input type="text" name="nomeFin" id="nomeFin" placeholder="Nome">
+                    </div>
+                    <div>
+                        <input class="cpfM" type="text" name="cpfFin" id="cpfFin" placeholder="CPF" maxlength="11">
+                    </div>
+                    <div>
+                        <input type="text" name="apartamentoFin" id="apartamentoFin" placeholder="Apartamento">
+                    </div>
+                </div>
+                <div class="c-2">
+                    <div>
+                        <input type="number" name="valorFin" id="valorFin" placeholder="Valor(R$)">
+                    </div>
+                    <div>
+                        <input type="tel" name="telefoneFin" id="telefoneFin" placeholder="Telefone">
+                    </div>
+                    <div>
+                        <input type="email" name="emailFin" id="emailFin" placeholder="E-mail">
+                    </div>
+                </div>
+                <button type="button" onclick="cadastrarValor()">Inserir</button>
+            </form>
+        </div>
+        <div class="tabela-bg">
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Apartamento</th>
+                            <th>Valor (R$)</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaVlr">
+                        <td></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container footer-bg">
+        <div class="footer-conteudo">
+            <p><a href="https://github.com/NakamuraNP" target="_blank">Matheus Moreira &copy; - 2022</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

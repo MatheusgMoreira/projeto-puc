@@ -1,0 +1,115 @@
+.form-bg-cad {
+  display: flex;
+  align-items: center;
+
+  .banner-img {
+    display: flex;
+
+    img {
+      max-width: 100%;
+      height: 90vh;
+    }
+
+    @include d(md) {
+        display: none;
+      }
+
+    @include d(sm) {
+      display: none;
+    }
+  }
+
+  .formulario-cad {
+    width: 75%;
+
+    h2 {
+      @include titulo(1);
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .c-1,
+    .c-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1em;
+
+      input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $cor-suporte-2;
+        margin: 0.5em;
+        font-family: $fonte-2;
+        color: $cor-suporte-3;
+
+        &::placeholder {
+          color: $cor-suporte-1;
+        }
+
+        &:focus {
+          background: transparent;
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 0.5em;
+      background: $cor-secundaria;
+      border: 1px solid $cor-secundaria;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-family: $fonte-1;
+      color: $cor-suporte-2;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background: $cor-suporte-2;
+        border: 1px solid $cor-suporte-2;
+        color: $cor-secundaria;
+      }
+    }
+
+    @include d(sm) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em 0;
+      width: 100%;
+
+      .c-1,
+      .c-2 {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+
+        input {
+          margin-bottom: 2em;
+        }
+      }
+    }
+
+    @include d(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em 0;
+        width: 100%;
+      }
+  }
+
+  @include d(sm) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include d(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

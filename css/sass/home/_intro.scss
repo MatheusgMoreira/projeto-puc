@@ -1,0 +1,57 @@
+.intro-conteudo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .intro-img {
+    img {
+      max-width: 100%;
+      height: 90vh;
+      margin-bottom: -5px;
+    }
+
+    @include d(sm) {
+      display: none;
+    }
+
+    @include d(md) {
+      display: none;
+    }
+  }
+
+  .intro-texto {
+    flex: 1;
+
+    h1 {
+      @include titulo(2);
+      text-align: center;
+    }
+
+    h3 {
+      @include titulo(1);
+      text-align: center;
+    }
+
+    p {
+      @include paragrafo(1);
+      margin: 2em 3em;
+      text-align: center;
+    }
+
+    @include d(sm) {
+      h1 {
+        @include titulo(2);
+        padding: 10px;
+      }
+    }
+  }
+
+  @include d(sm) {
+    flex-direction: column;
+  }
+
+  @include d(md) {
+    flex-direction: column;
+    padding: 5em 0;
+  }
+}

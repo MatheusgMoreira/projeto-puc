@@ -1,0 +1,45 @@
+.feedback-conteudo {
+  display: flex;
+  background: $cor-terciaria;
+  padding: 5em;
+
+  .feedback {
+    text-align: center;
+    padding: 2em;
+    color: $cor-suporte-3;
+
+    h3 {
+      @include titulo(2);
+      color: $cor-secundaria;
+      margin-bottom: 0.5em;
+    }
+
+    img {
+      max-width: 50%;
+      margin: 2em 0;
+    }
+
+    @include d(sm) {
+      hr {
+        display: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @include d(md) {
+      padding: 1em 0;
+
+    }
+  }
+
+  @include d(sm) {
+    flex-direction: column;
+  }
+
+  @include d(md) {
+    padding: 0;
+  }
+}

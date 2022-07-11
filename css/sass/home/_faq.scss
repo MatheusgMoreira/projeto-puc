@@ -1,0 +1,89 @@
+.faq-conteudo {
+  h1 {
+    @include titulo(2);
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  hr {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .faq-lista {
+    margin-left: 15em;
+    padding: 5em;
+
+    dt {
+      @include lista(1);
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      color: $cor-suporte-2;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        margin-right: 10px;
+        background: $cor-secundaria;
+      }
+    }
+
+    dd {
+      @include paragrafo(2);
+      margin-bottom: 0.5rem;
+      margin-left: 30px;
+      margin-right: 15em;
+
+      @include d(sm) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    @include d(sm) {
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    @include d(md) {
+      margin: 0;
+      padding: 1.5em;
+    }
+
+  }
+}
+
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: "⬎";
+  margin-left: 10px;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: "⬏";
+}
+
+[data-anime="accordion"] dd.ativo {
+  display: block;
+  animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}

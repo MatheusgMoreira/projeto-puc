@@ -5,20 +5,22 @@ function login() {
   let user = document.querySelector("#user").value;
   let password = document.querySelector("#password").value;
   const conta = JSON.parse(localStorage.getItem("lista-pessoas"));
-  const loginAdm = Array(localStorage.getItem("login-adm"));
+  //const loginAdm = JSON.parse(localStorage.getItem("login-adm"));
 
-  loginAdm.forEach((usuario) => {
-    
+  /*loginAdm.forEach((usuario) => {
     if (usuario.includes(user) && usuario.includes(password)) {
-      window.open("pags/adm.html");
-    }
-  });
-
-  conta.forEach((usuario) => {
-    if (usuario.email == user && usuario.cpf == password) {
-      window.open("pags/usuario.html");
+      window.location = "other_pages/adm.html";
       return;
     }
   });
-  alert("Usuario/senha invalidos");
+  */
+
+  conta.forEach((usuario) => {
+    console.log("Usuario: " + usuario.email + " user: " + user);
+    console.log("CPF: " + usuario.cpf + " Password: " + password);
+    if (usuario.email == user && usuario.cpf == password) {
+      window.location = "other_pages/usuario.html";
+      return;
+    }
+  });
 }

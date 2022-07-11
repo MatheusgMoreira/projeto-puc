@@ -1,0 +1,31 @@
+//Fontes
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap");
+
+//Variaveis e mixins
+@import "variaveis";
+@import "mixins";
+
+//Gerais
+@import "normalize";
+@import "reset";
+@import "geral";
+@import "form-cadastro";
+@import "form-geral";
+@import "tabela";
+
+//Conteúdo
+@import "header";
+@import "footer";
+@import "modal";
+
+//Home
+@import "home/intro";
+@import "home/servicos";
+@import "home/planos";
+@import "home/feedback";
+@import "home/faq";
+@import "home/contato";
+
+//Usuário
+@import "usuario";

@@ -1,0 +1,138 @@
+.contato-bg {
+  display: flex;
+  justify-content: center;
+  background: $cor-terciaria;
+
+  .contato-conteudo {
+    width: 75%;
+    display: flex;
+    padding: 5em;
+
+    .contato-titulo {
+      flex: 1;
+      display: flex;
+      justify-content: right;
+      align-items: flex-start;
+      @include titulo(2);
+      color: $cor-suporte-2;
+
+      @include d(sm) {
+        padding: 1em;
+      }
+    }
+
+    .contato-form {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5em 0;
+
+      form {
+        border: 1px solid $cor-suporte-2;
+        padding: 5em;
+        @include paragrafo(2);
+
+        @include d(sm) {
+          padding: 1em;
+        }
+      }
+
+      input,
+      textarea,
+      button {
+        display: block;
+      }
+
+      input,
+      textarea {
+        margin-bottom: 1em;
+        padding: 0.5em;
+        border: none;
+        border-bottom: 1px solid $cor-secundaria;
+        background: transparent;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      button {
+        margin: 0 auto;
+        padding: 0.5em;
+        background: $cor-secundaria;
+        border: 1px solid $cor-terciaria;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: $cor-suporte-2;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: $cor-suporte-2;
+          border: 1px solid $cor-suporte-2;
+          color: $cor-secundaria;
+        }
+      }
+
+      @include d(sm) {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      @include d(md) {
+        flex-direction: column;
+        padding: 1em 0;
+      }
+    }
+
+    .contato-rede-sociais {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        width: 50%;
+      }
+
+      @include d(sm) {
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0px;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      @include d(md) {
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0px;
+
+        span {
+          text-align: center;
+        }
+      }
+    }
+
+    @include d(sm) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    @include d(md) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em 0;
+    }
+  }
+
+  @include d(sm) {
+    flex-direction: column;
+  }
+}

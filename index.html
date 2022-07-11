@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,234 +7,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema | Home</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Icon -->
-    <link rel="shortcut icon"
-        href="https://cdn-icons.flaticon.com/png/512/2511/premium/2511629.png?token=exp=1651456283~hmac=04a355ff6e72f7299cce992bc5ddaa6a"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="media/shortcuticon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
     <script>document.documentElement.className += ' js';</script>
-    
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="home-img">
-            <div class="main-title">
-                <h1>CHARGER</h1>
-                <p>Synonym of organization</p>
-            </div>
-        </div>
+    <header id="header">
+        <nav id="nav" data-menu="suave">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false"><span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#faq">Faq</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a data-modal="abrir">Login →</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <header>
-            <div class="menu">
-                <ul class="login-menu">
-                    <li class="login" data-modal="abrir"><a href="">Login →</a></li>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
-        <article>
-            <section id="intro">
-                <div class="intro">
-                    <div class="intro-1">
-                        <img src="media/undraw_in_sync_re_jlqd.svg" alt="">
-                    </div>
-                    <div class="intro-2">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi rerum repudiandae blanditiis
-                            cum
-                            unde
-                            vel nobis id consequatur eveniet! Eaque fugit doloremque quas corrupti et ipsa voluptate
-                            optio
-                            sint
-                            ea!
-                            Illum accusamus natus voluptates, itaque numquam laudantium eaque praesentium harum alias
-                            unde
-                            atque, in veritatis. Qui, perferendis odit. Lorem ipsum, dolor sit amet consectetur
-                            adipisicing
-                            elit. Exercitationem amet, repellendus sit ratione harum officiis reprehenderit in voluptate
-                            aliquam
-                            facere hic, consequatur natus expedita quasi, quam minus vero minima eveniet!</p>
-                    </div>
+    <main>
+        <section class="container intro-bg">
+            <div class="intro-conteudo">
+                <div class="intro-img">
+                    <img src="media/intro-home.jpg" alt="">
                 </div>
-            </section>
+                <div class="intro-texto">
+                    <h1>Conheça mais sobre a OnCharge</h1>
+                    <h3>a melhor em carregamento de carros</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nihil accusamus architecto
+                        debitis, aut quo impedit est non rem aliquid praesentium amet veniam adipisci dolorem veritatis
+                        delectus atque numquam? Deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Provident nobis pariatur reprehenderit totam sequi voluptates nostrum accusamus itaque ex,
+                        beatae odio cumque corporis. Tenetur, rem voluptatibus nemo ad corrupti adipisci?</p>
+                </div>
+            </div>
+        </section>
 
-            <hr>
+        <section id="servicos" class="container servicos-bg">
+            <div class="servicos-conteudo">
+                <div class="servico sv-1">
+                    <h3>No seu Condomínio</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, impedit, cupiditate tempore
+                        reprehenderit animi quisquam repellat dicta, vero tenetur unde in consequuntur expedita eos
+                        perspiciatis minima voluptas quaerat dolor sunt?</p>
+                    <img src="media/condominio-home.jpg" alt="">
+                </div>
+                <div class="servico sv-2">
+                    <h3>Através do celular</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, impedit, cupiditate tempore
+                        reprehenderit animi quisquam repellat dicta, vero tenetur unde in consequuntur expedita eos
+                        perspiciatis minima voluptas quaerat dolor sunt?</p>
+                    <img src="media/celular-home.jpg" alt="">
+                </div>
+                <div class="servico">
+                    <h3>Carregando seu carro</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, impedit, cupiditate tempore
+                        reprehenderit animi quisquam repellat dicta, vero tenetur unde in consequuntur expedita eos
+                        perspiciatis minima voluptas quaerat dolor sunt?</p>
+                    <img src="media/carrro-home.jpg" alt="">
+                </div>
+            </div>
+        </section>
 
-            <div id="instruct">
-                <div class="instruct">
+        <section id="planos" class="container planos-bg">
+            <div class="planos-conteudo">
+                <h1>Nossos Planos</h1>
+                <div class="plano">
                     <div class="p-1">
-                        <div class="p-1-1">
-                            <h3>1º Passo</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium commodi dolor
-                                ratione
-                                tempora ullam soluta doloremque molestias aliquam tenetur quod, itaque architecto
-                                deserunt,
-                                tempore animi a nobis at, impedit magni.</p>
-                        </div>
-                        <div class="p-1-2">
-                            <img src="media/undraw_booking_re_gw4j.svg" alt="">
-                        </div>
+                        <h3>Gold</h3>
+                        <p><sup>R$550,00</sup></p>
                     </div>
                     <div class="p-2">
-                        <div class="p-2-2">
-                            <img src="media/undraw_mobile_application_re_13u3.svg" alt="">
-                        </div>
-                        <div class="p-2-1">
-                            <h3>2º Passo</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium commodi dolor
-                                ratione
-                                tempora ullam soluta doloremque molestias aliquam tenetur quod, itaque architecto
-                                deserunt,
-                                tempore animi a nobis at, impedit magni.</p>
-                        </div>
+                        <a href="">Contratar</a>
+                        <ul>
+                            <li>Energia limpa</li>
+                            <li>Acessibilidade</li>
+                            <li>Beneficios</li>
+                            <li>Confiabilidade</li>
+                            <li>Suporte 24h</li>
+                            <li>Descontos em manutenção</li>
+                        </ul>
                     </div>
-                    <div class="p-3">
-                        <div class="p-3-1">
-                            <h3>3º Passo</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium commodi dolor
-                                ratione
-                                tempora ullam soluta doloremque molestias aliquam tenetur quod, itaque architecto
-                                deserunt,
-                                tempore animi a nobis at, impedit magni.</p>
-                        </div>
-                        <div class="p-3-2">
-                            <img src="media/undraw_electric_car_b-7-hl.svg" alt="">
-                        </div>
+                </div>
+                <div class="plano">
+                    <div class="p-1">
+                        <h3>Silver</h3>
+                        <p><sup>R$450,00</sup></p>
+                    </div>
+                    <div class="p-2">
+                        <ul>
+                            <li>Energia limpa</li>
+                            <li>Acessibilidade</li>
+                            <li>Beneficios</li>
+                            <li>Confiabilidade</li>
+                            <li>Suporte 24h</li>
+                        </ul>
+                        <a href="">Contratar</a>
+                    </div>
+                </div>
+                <div class="plano">
+                    <div class="p-1">
+                        <h3>Copper</h3>
+                        <p><sup>R$350,00</sup></p>
+                    </div>
+                    <div class="p-2">
+                        <a href="">Contratar</a>
+                        <ul>
+                            <li>Energia limpa</li>
+                            <li>Acessibilidade</li>
+                            <li>Beneficios</li>
+                            <li>Confiabilidade</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <section id="img-fundo">
-                <div class="img-fundo">
-                    <h1>Venha fazer parte do futuro</h1>
-                </div>
-            </section>
-
-            <section id="feedback">
+        <section id="feedback" class="container feedback-bg">
+            <div class="feedback-conteudo">
                 <div class="feedback">
-                    <div class="feedback-1">
-                        <img src="media/undraw_male_avatar_323b.svg" alt="">
-                        <h3>José da Silva</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
-                            dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
-                            laboriosam ad voluptatibus similique porro? Sed.
-                        </p>
-                    </div>
-                    <div class="feedback-2">
-                        <img src="media/undraw_female_avatar_w3jk.svg" alt="">
-                        <h3>Rafaela Souza</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
-                            dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
-                            laboriosam ad voluptatibus similique porro? Sed.
-                        </p>
-                    </div>
-                    <div class="feedback-3">
-                        <img src="media/undraw_male_avatar_323b.svg" alt="">
-                        <h3>Lucas Rodrigues</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
-                            dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
-                            laboriosam ad voluptatibus similique porro? Sed.
-                        </p>
-                    </div>
+                    <hr>
+                    <img src="media/avatar-homem.svg" alt="">
+                    <h3>José da Silva</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
+                        dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
+                        laboriosam ad voluptatibus similique porro? Sed.
+                    </p>
                 </div>
-            </section>
-
-            <hr>
-
-            <section id="faq">
-                <div class="faq">
-                    <div>
-                        <dl class="faq-lista" data-anime="accordion">
-                            <dt>Como funciona?</dt>
-                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus ipsam, laudantium
-                                fuga
-                                alias
-                                quaerat minima eaque esse praesentium id facilis similique voluptas aut numquam officiis
-                                porro,
-                                excepturi recusandae mollitia!</dd>
-                            <dt>É fácil de usar?</dt>
-                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus ipsam, laudantium
-                                fuga
-                                alias
-                                quaerat minima eaque esse praesentium id facilis similique voluptas aut numquam officiis
-                                porro,
-                                excepturi recusandae mollitia!</dd>
-                            <dt>Posso usar no meu condomínio?</dt>
-                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus ipsam, laudantium
-                                fuga
-                                alias
-                                quaerat minima eaque esse praesentium id facilis similique voluptas aut numquam officiis
-                                porro,
-                                excepturi recusandae mollitia!</dd>
-                            <dt>É caro manter o sistema?</dt>
-                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus ipsam, laudantium
-                                fuga
-                                alias
-                                quaerat minima eaque esse praesentium id facilis similique voluptas aut numquam officiis
-                                porro,
-                                excepturi recusandae mollitia!</dd>
-                        </dl>
-                    </div>
-                    <div>
-                        <img src="media/undraw_faq_re_31cw.svg" alt="">
-                    </div>
+                <div class="feedback">
+                    <hr>
+                    <img src="media/avatar-mulher.svg" alt="">
+                    <h3>Rafaela Souza</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
+                        dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
+                        laboriosam ad voluptatibus similique porro? Sed.
+                    </p>
                 </div>
-            </section>
-        </article>
-
-        <footer>
-            <div class="rodape-p-1">
-                <div class="info-cont">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li>E-mail: <a href="mailto:sistema@gmail.com" target="_blank">sistema@condo.com.br</a></li>
-                        <li>Telefone: <a href="">(31) 9 1234-5678</a></li>
-                    </ul>
-                </div>
-                <div class="redes-sociais">
-                    <h3>Nos siga nas Redes Sociais</h3>
-                    <ul>
-                        <a href=""><img src="media/facebook.png" alt=""></a>
-                        <a href=""><img src="media/instagram.png" alt=""></a>
-                        <a href=""><img src="media/twitter.png" alt=""></a>
-                    </ul>
+                <div class="feedback">
+                    <hr>
+                    <img src="media/avatar-homem.svg" alt="">
+                    <h3>Lucas Rodrigues</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus corrupti expedita sunt
+                        dolor quos! Distinctio unde rerum provident autem dolore, ratione ipsam ipsum consequatur
+                        laboriosam ad voluptatibus similique porro? Sed.
+                    </p>
                 </div>
             </div>
-            <hr>
-            <div class="rodape-p-2">
-                <div class="menu-rodap">
-                    <ul>
-                        <li><a href="index.html">Voltar ao início</a></li>
-                    </ul>
+        </section>
+
+        <section id="faq" class="container faq-bg">
+            <div class="faq-conteudo">
+                <h1>Tire suas dúvidas aqui</h1>
+                <hr>
+                <dl class="faq-lista" data-anime="accordion">
+                    <dt>Qual a vantagem dos planos</dt>
+                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor deleniti odit necessitatibus
+                        nobis atque commodi quis blanditiis earum, illum ex voluptas exercitationem quia quaerat nihil
+                        eveniet enim nesciunt rerum tempore.</dd>
+                    <dt>Vale a pena?</dt>
+                    <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, quasi molestiae corporis
+                        illum sequi, explicabo ea deleniti repellendus nisi maxime error dignissimos optio deserunt
+                        aliquid nulla itaque? Esse, aliquam voluptate?
+                    </dd>
+                    <dt>O diferencial da OnCharge</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quo cupiditate eveniet quae
+                        maiores atque quasi vel, ducimus dolorem minus ad! Aliquam, adipisci doloremque quasi beatae
+                        dicta expedita saepe vel!</dd>
+                    <dt>Como funciona a manutenção</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptas nobis sapiente
+                        consectetur, totam libero corrupti rerum? Nemo eaque cum esse aperiam dignissimos, sed aliquam
+                        quasi quod rem facere! Nemo.
+                    </dd>
+            </div>
+        </section>
+
+        <section id="contato" class="container contato-bg">
+            <div class="contato-conteudo">
+                <div class="contato-titulo">
+                    <h1>Contato</h1>
+                </div>
+                <div class="contato-form">
+                    <form action="">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="E-mail">
+                        <textarea name="" id="" placeholder="Mensagem"></textarea>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+                <div class="contato-rede-sociais">
+                    <span><a href=""><img src="media/facebook.png" alt=""></a></span>
+                    <span><a href=""><img src="media/instagram.png" alt=""></a></span>
+                    <span><a href=""><img src="media/whatsapp.png" alt=""></a></span>
                 </div>
             </div>
-        </footer>
-    </div>
+        </section>
+    </main>
+
+    <footer class="container footer-bg">
+        <div class="footer-conteudo">
+            <p><a href="https://github.com/NakamuraNP" target="_blank">Matheus Moreira &copy; - 2022</a></p>
+        </div>
+    </footer>
 
     <section class="modal-container" data-modal="container">
         <div class="modal">
             <button data-modal="fechar" class="fechar">X</button>
-            <form action="">
-                <label for="user">User</label>
-                <input type="text" for="user" name="user" id="user">
-                <label for="password">Senha</label>
-                <input type="password" for="password" name="password" id="password">
-                <button onclick="login()">Entrar</button>
-                <p>Não possui conta? <a href="pags/cadastro.html">Cadastre-se</a></p>
-            </form>
+
+            <label for="user">User</label>
+            <input type="text" for="user" name="user" id="user">
+            <label for="password">Senha</label>
+            <input type="password" for="password" name="password" id="password">
+            <button onclick="login()">Entrar</button>
+            <p>Não possui conta? <a href="other_pages/cadastro.html">Cadastre-se</a></p>
+
         </div>
     </section>
 

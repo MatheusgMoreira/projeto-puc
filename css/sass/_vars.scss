@@ -1,0 +1,22 @@
+//Mixin de media-querie
+$cols: 12;
+$gutter: 20px;
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px;
+
+@mixin d($size) {
+  @if $size == lg {
+    @media screen and (min-width: $lg-device) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (min-width: $md-device) and (max-width: ($lg-device - 1)) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media screen and (max-width: ($md-device - 1)) {
+      @content;
+    }
+  }
+}

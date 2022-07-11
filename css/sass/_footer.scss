@@ -1,0 +1,11 @@
+.footer-conteudo {
+    display: flex;
+    align-items: center;
+    background: $cor-suporte-1;
+    padding: 1.5em;
+    margin-top: -5px;
+    @include lista(1);
+    a {
+        color: $cor-secundaria;
+    }
+}

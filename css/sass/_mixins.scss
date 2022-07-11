@@ -1,0 +1,56 @@
+//Responsividade
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px;
+
+@mixin d($size) {
+  @if $size == lg {
+    @media screen and (min-width: $lg-device) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (min-width: $md-device) and (max-width: ($lg-device - 1)) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media screen and (max-width: ($md-device - 1)) {
+      @content;
+    }
+  }
+}
+
+//Tipografia
+@mixin titulo($size) {
+  font-family: $fonte-1;
+  font-weight: bolder;
+  @if $size == 1 {
+    font-size: 2em;
+    color: $cor-secundaria;
+  } @else if $size == 2 {
+    font-size: 3em;
+    color: $cor-terciaria;
+  }
+}
+
+@mixin paragrafo($size) {
+  font-family: $fonte-2;
+  font-weight: lighter;
+  color: $cor-suporte-3;
+  @if $size == 1 {
+    font-size: 1em;
+  } @else if $size == 2 {
+    font-size: 1.2em;
+  }
+}
+
+@mixin lista($size) {
+  @if $size == 1 {
+    color: $cor-suporte-3;
+    font-family: $fonte-1;
+    font-size: 1.5em;
+  } @else if $size == 2 {
+    color: $cor-suporte-3;
+    font-family: $fonte-2;
+    font-size: 1em;
+  }
+}

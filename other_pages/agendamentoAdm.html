@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema | Agendamento Administrador</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../media/shortcuticon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>document.documentElement.className += ' js';</script>
+    <script src="../js/modules/agendamento.js"></script>
+</head>
+
+<body onload="carregaListaAgendamentos()">
+    <header id="header">
+        <nav id="nav" data-menu="suave">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false"><span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./adm.html">Administrador</a></li>
+                <li><a href="./agendamentoAdm.html">Agendamentos</a></li>
+                <li><a href="./financeiro.html">Financeiro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="formulario-geral">
+            <form action="">
+                <h2>Agendamento</h2>
+                <div class="c-1">
+                    <div>
+                        <input type="text" name="nomeAgd" id="nomeAgd" placeholder="Nome">
+                    </div>
+                    <div>
+                        <input type="text" name="cpfAgd" id="cpfAgd" placeholder="CPF">
+                    </div>
+                    <div>
+                        <input type="text" name="carroAgd" id="carroAgd" placeholder="Carro">
+                    </div>
+                </div>
+                <div class="c-2">
+                    <div>
+                        <input type="text" name="data" id="data" placeholder="Data" maxlength="10"
+                            onkeypress="mascaraData( this, event )">
+                    </div>
+                    <div>
+                        <input type="text" name="hora" id="hora" placeholder="Hora">
+                    </div>
+                    <div>
+                        <input type="text" name="telefoneAgd" id="telefoneAgd" placeholder="telefone">
+                    </div>
+                </div>
+                <button type="button" onclick="cadastrarAgendamento()">Agendar</button>
+            </form>
+        </div>
+        <div class="tabela-bg">
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Carro</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaAgendamento">
+                        <td></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="container footer-bg">
+        <div class="footer-conteudo">
+            <p><a href="https://github.com/NakamuraNP" target="_blank">Matheus Moreira &copy; - 2022</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>
