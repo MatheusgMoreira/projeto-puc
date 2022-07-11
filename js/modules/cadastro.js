@@ -143,22 +143,7 @@ function cadastrarPessoa() {
     }
   }
 
-  function cpfExiste(cpf) {
-    const pessoasCpf = JSON.parse(localStorage.getItem("lista-pessoas"));
-
-    if (pessoasCpf == null || "") {
-      return true;
-    } else {
-      pessoasCpf.forEach((usuario) => {
-        if (usuario.cpf == cpf) {
-          return false;
-        }
-      });
-    }
-    return true;
-  }
-
-  if (pessoa.validarDados() && validaCpfCnpj(cpfV) && cpfExiste(cpfV)) {
+  if (pessoa.validarDados() && validaCpfCnpj(cpfV)) {
     //Diálogo de sucesso e gravação
 
     bd.gravar(pessoa);
